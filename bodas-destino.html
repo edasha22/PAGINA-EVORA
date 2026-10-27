@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodas Destino | ÉVORA — Experiences Events Destination Weddings</title>
+  <meta name="description" content="Organización integral de bodas y bodas destino nacionales e internacionales. Cada detalle, perfectamente planeado.">
+  
+  <!-- Tipografías Oficiales (Sección 3.4): Cormorant Garamond (600, 700) e Inter (400, 500, 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tu hoja de estilos externa -->
+  <link rel="stylesheet" href="CSS/bodas-destino.css">
+  <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
+</head>
+<body>
+
+  <!-- CABECERA Y NAVEGACIÓN (Sección 3.2 y 5) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+        <span class="logo-title">ÉVORA</span>
+        <span class="logo-sub">EXPERIENCES</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="#modalidades-bodas" class="nav-link">Bodas</a>
+        <a href="bodas-destino.html" class="nav-link active">Bodas Destino</a>
+        <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+        <a href="rsvp-digital.html" class="nav-link">RSVP Digital</a>
+        <a href="paquetes.html" class="nav-link">Paquetes</a>
+        <a href="contacto.html" class="btn btn-secondary">Contacto</a>
+      </nav>
+    </div>
+    <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
+  </header>
+
+  <main>
+    <!-- HERO PRINCIPAL (Editorial, sin vídeo ni parallax - Sección 4.1) -->
+    <section class="hero-section reveal">
+      <div class="container grid-12 align-center">
+        <div class="col-6">
+          <span class="eyebrow">Destination Weddings</span>
+          <h1>Diseñamos experiencias memorables con la precisión que cada celebración merece.</h1>
+          <p class="lead-text">
+            Planeamos, coordinamos y ejecutamos bodas destino integrando dirección editorial, hospitalidad para viajeros y tecnología RSVP para controlar cada detalle.
+          </p>
+          <div class="hero-actions">
+            <a href="contacto.html?form=cotizacion" class="btn btn-primary">Solicitar Cotización</a>
+            <a href="#destinos-nacionales" class="btn btn-secondary">Explorar Destinos</a>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="photo-frame hero-photo">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Celebración de boda destino al aire libre con luz natural"
+                 decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1: DESTINOS NACIONALES (Obligatorio Página 4) -->
+    <section id="destinos-nacionales" class="section-mist">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Curaduría en Perú</span>
+          <h2>Destinos Nacionales</h2>
+          <p class="lead-text">
+            Escenarios con carácter histórico, arquitectónico y natural gestionados junto a nuestra red de proveedores seleccionados.
+          </p>
+        </div>
+
+        <div class="grid-12">
+          <!-- Tarjeta 1 -->
+          <article class="col-4 reveal">
+            <div class="card">
+              <div>
+                <div class="photo-frame card-photo">
+                  <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" 
+                       alt="Valle Sagrado y Cusco" loading="lazy" decoding="async">
+                </div>
+                <span class="eyebrow">Andes & Patrimonio</span>
+                <h3>Cusco & Valle Sagrado</h3>
+                <p>Haciendas privadas, capillas coloniales y hoteles boutique rodeados de paisajes andinos para celebraciones de varios días.</p>
+              </div>
+              <div class="tag-meta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1320" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Logística integral + Gestión QR</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="col-4 reveal">
+            <div class="card">
+              <div>
+                <div class="photo-frame card-photo">
+                  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
+                       alt="Paracas y Costa Peruana" loading="lazy" decoding="async">
+                </div>
+                <span class="eyebrow">Reserva Costera</span>
+                <h3>Paracas & Costa Norte</h3>
+                <p>Resorts cinco estrellas, muelles privados y recepciones frente al mar con atardeceres cálidos y diseño acústico e iluminación.</p>
+              </div>
+              <div class="tag-meta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1320" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Recepción de múltiples días + RSVP</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="col-4 reveal">
+            <div class="card">
+              <div>
+                <div class="photo-frame card-photo">
+                  <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" 
+                       alt="Arequipa y Casonas de Sillar" loading="lazy" decoding="async">
+                </div>
+                <span class="eyebrow">Arquitectura en Sillar</span>
+                <h3>Arequipa & Casonas</h3>
+                <p>Claustros históricos y jardines privados con curaduría gastronómica de autor y dirección de arte editorial.</p>
+              </div>
+              <div class="tag-meta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1320" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Proveedores exclusivos + Mesas asignadas</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: DESTINOS INTERNACIONALES (Obligatorio Página 4) -->
+    <section id="destinos-internacionales">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Alcance Global</span>
+          <h2>Destinos Internacionales</h2>
+          <p class="lead-text">
+            Coordinación transfronteriza con control de bloques hoteleros, itinerarios de viaje y confirmación digital de asistencia en tiempo real.
+          </p>
+        </div>
+
+        <div class="grid-12">
+          <article class="col-4 reveal">
+            <div class="card card-secondary">
+              <div>
+                <div class="photo-frame card-photo">
+                  <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" 
+                       alt="Cartagena y Riviera Maya" loading="lazy" decoding="async">
+                </div>
+                <span class="eyebrow">Caribe & México</span>
+                <h3>Cartagena & Riviera Maya</h3>
+                <p>Murallas históricas, haciendas coloniales y complejos privados frente al mar Caribe con hospitalidad de lujo.</p>
+              </div>
+              <div class="tag-meta">
+                <span>Coordinación bilingüe + RSVP Digital</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-4 reveal">
+            <div class="card card-secondary">
+              <div>
+                <div class="photo-frame card-photo">
+                  <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=80" 
+                       alt="Toscana, Madrid y Évora" loading="lazy" decoding="async">
+                </div>
+                <span class="eyebrow">Europa Mediterránea</span>
+                <h3>Toscana, Madrid & Évora</h3>
+                <p>Villas históricas, viñedos privados y palacios europeos operados con proveedores certificados en cada destino.</p>
+              </div>
+              <div class="tag-meta">
+                <span>Producción europea + Portal Cliente</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-4 reveal">
+            <div class="card card-secondary">
+              <div>
+                <div class="photo-frame card-photo">
+                  <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80" 
+                       alt="Mendoza y Punta del Este" loading="lazy" decoding="async">
+                </div>
+                <span class="eyebrow">Sudamérica</span>
+                <h3>Mendoza & Punta del Este</h3>
+                <p>Bodegas de autor al pie de la cordillera y arquitectura contemporánea frente al océano Atlántico.</p>
+              </div>
+              <div class="tag-meta">
+                <span>Logística de invitados + QR Check-in</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE INSTITUCIONAL (20% Azul Medianoche): BODAS (Cubre Página 3) -->
+    <section id="modalidades-bodas" class="section-midnight">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Modalidades de Bodas (Página 3)</span>
+          <h2>Elegancia sin preocupaciones en cada etapa</h2>
+          <p class="lead-text text-light">
+            Seleccionamos el nivel de intervención exacto según las necesidades de planificación y control de tu boda.
+          </p>
+        </div>
+
+        <div class="grid-12">
+          <div class="col-4 reveal">
+            <div class="card-dark">
+              <span class="eyebrow">01 / Servicio Integral</span>
+              <h3>Planeación Completa</h3>
+              <p>Diseño conceptual desde cero, curaduría de locación y proveedores, control presupuestal en el Portal Cliente y gestión integral de invitados.</p>
+            </div>
+          </div>
+
+          <div class="col-4 reveal">
+            <div class="card-dark">
+              <span class="eyebrow">02 / Optimización</span>
+              <h3>Planeación Parcial</h3>
+              <p>Acompañamiento para parejas que ya cuentan con locación definida y requieren integrar proveedores especializados, dirección técnica y RSVP Digital.</p>
+            </div>
+          </div>
+
+          <div class="col-4 reveal">
+            <div class="card-dark">
+              <span class="eyebrow">03 / Dirección en Vivo</span>
+              <h3>Coordinación del Día</h3>
+              <p>Ejecución milimétrica del cronograma, supervisión de montaje, recepción con códigos QR y control de protocolo durante toda la celebración.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: GALERÍA EDITORIAL (Obligatorio Página 4 - Bordes 24px) -->
+    <section id="galeria">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Dirección de Arte</span>
+          <h2>Galería de Bodas Destino</h2>
+          <p class="lead-text">
+            Fotografía protagonista con luz natural, tonos cálidos, baja saturación y edición editorial.
+          </p>
+        </div>
+
+        <!-- Filtros de galería controlados por bodas-destino.js -->
+        <div class="filter-bar reveal" role="group" aria-label="Filtrar galería por tipo de destino">
+          <button type="button" class="btn btn-primary filter-btn" data-filter="todos" aria-pressed="true">Todos (<span id="count-total">6</span>)</button>
+          <button type="button" class="btn btn-secondary filter-btn" data-filter="nacional" aria-pressed="false">Destinos Nacionales</button>
+          <button type="button" class="btn btn-secondary filter-btn" data-filter="internacional" aria-pressed="false">Destinos Internacionales</button>
+          <button type="button" class="btn btn-secondary filter-btn" data-filter="detalles" aria-pressed="false">Detalles Decorativos</button>
+        </div>
+
+        <div class="grid-12" id="galeria-grid">
+          <div class="col-6 item-galeria reveal" data-categoria="nacional">
+            <div class="photo-frame gallery-lg">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" 
+                   alt="Mesa imperial en boda destino nacional" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="col-6 item-galeria reveal" data-categoria="internacional">
+            <div class="photo-frame gallery-lg">
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=900&q=80" 
+                   alt="Pareja en locación histórica internacional" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="col-4 item-galeria reveal" data-categoria="detalles">
+            <div class="photo-frame gallery-sm">
+              <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=700&q=80" 
+                   alt="Papelería editorial y detalles florales" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="col-4 item-galeria reveal" data-categoria="nacional">
+            <div class="photo-frame gallery-sm">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" 
+                   alt="Ceremonia al aire libre con luz cálida" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="col-4 item-galeria reveal" data-categoria="internacional">
+            <div class="photo-frame gallery-sm">
+              <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=700&q=80" 
+                   alt="Recepción nocturna de lujo" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="col-12 item-galeria reveal" data-categoria="detalles">
+            <div class="photo-frame gallery-sm">
+              <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Diseño de mesas y arquitectura floral minimalista" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA hacia Contacto -->
+        <div class="cta-banner reveal">
+          <div>
+            <span class="eyebrow">Donde cada celebración cobra vida</span>
+            <h3>Comienza a planificar tu Boda Destino</h3>
+            <p>Solicita una cotización o agenda una cita privada con nuestros especialistas.</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="contacto.html?form=cita" class="btn btn-secondary">Reservar Cita</a>
+            <a href="contacto.html?form=cotizacion" class="btn btn-primary">Solicitar Cotización</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="site-footer">
+    <div class="container grid-12">
+      <div class="col-6">
+        <div class="logo footer-logo">
+          <span class="logo-title">ÉVORA</span>
+          <span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span>
+        </div>
+        <p class="footer-desc">
+          Cada detalle, perfectamente planeado. Organización integral de eventos premium con plataforma digital de gestión de invitados.
+        </p>
+      </div>
+      <div class="col-6">
+        <h4 class="footer-heading">Navegación del Sitio</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">1. Inicio</a></li>
+          <li><a href="rsvp-digital.html">7. RSVP Digital</a></li>
+          <li><a href="nosotros.html">2. Nosotros</a></li>
+          <li><a href="gestion-invitados.html">8. Gestión de Invitados</a></li>
+          <li><a href="#modalidades-bodas">3. Bodas</a></li>
+          <li><a href="galeria.html">9. Galería</a></li>
+          <li><a href="bodas-destino.html">4. Bodas Destino</a></li>
+          <li><a href="paquetes.html">10. Paquetes</a></li>
+          <li><a href="eventos-corporativos.html">5. Eventos Corporativos</a></li>
+          <li><a href="blog.html">11. Blog</a></li>
+          <li><a href="ocasiones-especiales.html">6. Ocasiones Especiales</a></li>
+          <li><a href="contacto.html">12. Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP OBLIGATORIO (Sección 6) -->
+  <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4B483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+    <span>WhatsApp Concierge</span>
+  </a>
+
+  <script src="SCRIPT/general.js"></script>
+  <script src="SCRIPT/bodas-destino.js"></script>
+</body>
+</html>
