@@ -96,6 +96,7 @@ document.querySelectorAll('[data-contact-form]').forEach((form) => {
     formData.set('access_key', '09b3acfc-da76-4c16-9cb7-db86e6c27b4d');
     formData.set('subject', formData.get('asunto') || formSubjects[formType] || 'Nuevo mensaje desde ÉVORA');
     formData.set('email', formData.get('correo'));
+    const formPayload = Object.fromEntries(formData.entries());
 
     status.classList.add('is-visible');
     status.classList.remove('is-success', 'is-error');
@@ -105,7 +106,11 @@ document.querySelectorAll('[data-contact-form]').forEach((form) => {
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(formPayload)
       });
       const result = await response.json();
 
@@ -113,13 +118,13 @@ document.querySelectorAll('[data-contact-form]').forEach((form) => {
         throw new Error(result.message || 'El servicio no pudo procesar el formulario.');
       }
 
-      status.textContent = '¡Gracias! Tu mensaje se envió correctamente.';
+      status.textContent = 'Web3Forms recibió tu solicitud. La entrega del correo puede tardar unos minutos; revisa también Spam y Promociones.';
       status.classList.add('is-success');
       form.reset();
     } catch (error) {
       status.textContent = error instanceof TypeError
         ? 'No se pudo conectar con el servicio de envío. Revisa tu conexión e inténtalo de nuevo.'
-        : `No se pudo enviar el mensaje. ${error.message}`;
+        : `No se pudo enviar el mensaje. ${error.message || 'Inténtalo de nuevo más tarde.'}`;
       status.classList.add('is-error');
     } finally {
       submitButton.disabled = false;
