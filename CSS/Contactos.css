@@ -230,6 +230,21 @@
   display: block;
 }
 
+.form-status.is-success {
+  background: #e8f5ec;
+  color: #245b35;
+}
+
+.form-status.is-error {
+  background: #fff0ef;
+  color: #8a2e27;
+}
+
+.form-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
 .crm-notice,
 .contact-data-note {
   max-width: 900px;

@@ -1,5 +1,5 @@
 const contactConfig = {
-  whatsappPhone: '',
+  whatsappPhone: '+51 907 559 562',
   email: '',
   address: '',
   mapUrl: '',
@@ -11,7 +11,7 @@ const contactConfig = {
 };
 
 const whatsappUrl = contactConfig.whatsappPhone
-  ? `https://wa.me/${contactConfig.whatsappPhone.replace(/\D/g, '')}`
+  ? `https://wa.me/${contactConfig.whatsappPhone.replace(/\D/g, '')}?text=${encodeURIComponent('Hola, quisiera recibir información sobre sus servicios.')}`
   : '';
 
 document.querySelectorAll('[data-contact-value="whatsapp"]').forEach((element) => {
@@ -80,12 +80,50 @@ if (socialLinksContainer && configuredSocials.length > 0) {
 }
 
 document.querySelectorAll('[data-contact-form]').forEach((form) => {
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const status = form.querySelector('.form-status');
-    status.textContent = 'Tus datos pasaron la validación del navegador, pero todavía no se enviaron. El equipo debe conectar el CRM para activar este formulario.';
+    const submitButton = form.querySelector('[type="submit"]');
+    const formData = new FormData(form);
+    const formType = form.dataset.contactForm;
+    const formSubjects = {
+      cotizacion: 'Nueva solicitud de cotización',
+      cita: 'Nueva solicitud de cita',
+      contacto: 'Nuevo mensaje de contacto'
+    };
+
+    formData.set('access_key', '09b3acfc-da76-4c16-9cb7-db86e6c27b4d');
+    formData.set('subject', formData.get('asunto') || formSubjects[formType] || 'Nuevo mensaje desde ÉVORA');
+    formData.set('email', formData.get('correo'));
+
     status.classList.add('is-visible');
+    status.classList.remove('is-success', 'is-error');
+    status.textContent = 'Enviando tu mensaje...';
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'El servicio no pudo procesar el formulario.');
+      }
+
+      status.textContent = '¡Gracias! Tu mensaje se envió correctamente.';
+      status.classList.add('is-success');
+      form.reset();
+    } catch (error) {
+      status.textContent = error instanceof TypeError
+        ? 'No se pudo conectar con el servicio de envío. Revisa tu conexión e inténtalo de nuevo.'
+        : `No se pudo enviar el mensaje. ${error.message}`;
+      status.classList.add('is-error');
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 });
 
