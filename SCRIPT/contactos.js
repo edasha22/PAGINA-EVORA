@@ -118,7 +118,7 @@ document.querySelectorAll('[data-contact-form]').forEach((form) => {
         throw new Error(result.message || 'El servicio no pudo procesar el formulario.');
       }
 
-      status.textContent = 'Web3Forms recibió tu solicitud. La entrega del correo puede tardar unos minutos; revisa también Spam y Promociones.';
+      status.textContent = 'La entrega Del Mensaje puede tardar unos minutos, pero se ha enviado correctamente. Gracias por contactarnos.';
       status.classList.add('is-success');
       form.reset();
     } catch (error) {
