@@ -131,6 +131,8 @@ button:focus-visible {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1400px;
+  padding: clamp(14px, 1.8vw, 24px) clamp(16px, 3vw, 48px);
   gap: 20px;
 }
 
@@ -163,6 +165,8 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
   gap: 10px 22px;
 }
 

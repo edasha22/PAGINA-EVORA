@@ -130,7 +130,7 @@ h1, h2, h3, h4, .font-display {
 }
 
 /* ==========================================================================
-   Banner CTA 
+   Banner CTA (Llamada a la acción)
    ========================================================================== */
 .cta-banner {
   background-color: var(--color-midnight, #0B1320);
