@@ -9,30 +9,30 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
+	<link rel="stylesheet" href="CSS/bodas-destino.css">
 	<link rel="stylesheet" href="CSS/ocasiones-especiales.css">
 </head>
-<body>
-	<header class="site-header">
-		<div class="container header-inner">
-			<a href="nosotros.html" class="logo" aria-label="ÉVORA Experiences">
-				<span class="logo-title">ÉVORA</span>
-				<span class="logo-sub">EXPERIENCES</span>
-			</a>
-			<button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
-				<span></span><span></span><span></span>
-			</button>
-			<nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
-				<a href="nosotros.html" class="nav-link">Nosotros</a>
-				<a href="bodas.html" class="nav-link">Bodas</a>
-				<a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
-				<a href="ocasiones-especiales.html" class="nav-link active" aria-current="page">Ocasiones Especiales</a>
-				<a href="galeria.html" class="nav-link">Galería</a>
-				<a href="Contactos.html" class="btn btn-secondary">Contacto</a>
-			</nav>
-		</div>
-		<button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
+<body id="inicio">
+	<header class="evora-header">
+		<a class="evora-brand" href="index.html" aria-label="ÉVORA - Inicio">
+			ÉVORA
+			<small>EXPERIENCES · EVENTS</small>
+		</a>
+		<button class="evora-menu-toggle" type="button" aria-label="Abrir menú" aria-controls="evora-navigation" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
+		<nav class="evora-nav" id="evora-navigation" aria-label="Menú principal">
+			<a href="index.html">Inicio</a>
+			<a href="nosotros.html">Nosotros</a>
+			<a href="bodas.html">Bodas</a>
+			<a href="bodas-destino.html">Bodas destino</a>
+			<a href="ocasiones-especiales.html" aria-current="page">Ocasiones especiales</a>
+			<a href="galeria.html">Galería</a>
+			<a href="paquetes.html">Paquetes</a>
+			<a href="Contactos.html">Contacto</a>
+		</nav>
 	</header>
+	<button class="evora-menu-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1" hidden></button>
 
 	<main>
 		<section class="occasion-hero">
@@ -100,24 +100,38 @@
 		</section>
 	</main>
 
-	<footer class="site-footer">
-		<div class="container grid-12">
-			<div class="col-6">
-				<div class="logo footer-logo"><span class="logo-title">ÉVORA</span><span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span></div>
-				<p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos con atención personalizada.</p>
+	<footer class="evora-footer">
+		<div class="evora-footer-main">
+			<div class="evora-footer-about">
+				<a class="evora-footer-logo" href="index.html" aria-label="ÉVORA - Inicio">ÉVORA<small>EXPERIENCES · EVENTS</small></a>
+				<p class="evora-footer-description">Creamos celebraciones memorables con creatividad, planificación y cuidado en cada detalle.</p>
+				<span class="evora-footer-tagline">Cada detalle, perfectamente planeado.</span>
 			</div>
-			<div class="col-6">
-				<h2 class="footer-heading">Navegación del sitio</h2>
-				<ul class="footer-links">
-					<li><a href="nosotros.html">Nosotros</a></li>
-					<li><a href="bodas.html">Bodas</a></li>
-					<li><a href="ocasiones-especiales.html" aria-current="page">Ocasiones Especiales</a></li>
-					<li><a href="galeria.html">Galería</a></li>
-					<li><a href="Contactos.html">Contacto</a></li>
-				</ul>
+			<div class="evora-footer-column">
+				<h3>Explora</h3>
+				<a href="index.html">Inicio</a>
+				<a href="nosotros.html">Nosotros</a>
+				<a href="paquetes.html">Paquetes</a>
+				<a href="blog.html">Blog</a>
+			</div>
+			<div class="evora-footer-column">
+				<h3>Experiencias</h3>
+				<a href="bodas.html">Bodas</a>
+				<a href="bodas-destino.html">Bodas destino</a>
+				<a href="ocasiones-especiales.html">Ocasiones especiales</a>
+				<a href="galeria.html">Galería</a>
+			</div>
+			<div class="evora-footer-column evora-footer-contact">
+				<h3>Tu próxima celebración</h3>
+				<p>Cuéntanos qué estás imaginando y diseñemos una experiencia a tu medida.</p>
+				<a class="evora-footer-link-contact" href="Contactos.html">Hablemos de tu evento</a>
 			</div>
 		</div>
-		<div class="occasion-copyright"><p>&copy; 2026 ÉVORA Experiences. Todos los derechos reservados.</p></div>
+		<div class="evora-footer-bottom">
+			<p>&copy; 2026 ÉVORA. Todos los derechos reservados.</p>
+			<p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
+			<a href="#inicio">Volver arriba</a>
+		</div>
 	</footer>
 	<script src="SCRIPT/general.js"></script>
 </body>
