@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Una selección de bodas y celebraciones creadas por ÉVORA Experiences.">
+	<meta name="theme-color" content="#FAF8F4">
+	<title>Galería | ÉVORA Experiences</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="CSS/bodas-destino.css">
+	<link rel="stylesheet" href="CSS/galeria.css">
+</head>
+<body id="inicio">
+	<header class="evora-header">
+		<a class="evora-brand" href="index.html" aria-label="ÉVORA - Inicio">
+			ÉVORA
+			<small>EXPERIENCES · EVENTS</small>
+		</a>
+		<button class="evora-menu-toggle" type="button" aria-label="Abrir menú" aria-controls="evora-navigation" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
+		<nav class="evora-nav" id="evora-navigation" aria-label="Menú principal">
+			<a href="index.html">Inicio</a>
+			<a href="nosotros.html">Nosotros</a>
+			<a href="bodas.html">Bodas</a>
+			<a href="bodas-destino.html">Bodas destino</a>
+			<a href="ocasiones-especiales.html">Ocasiones especiales</a>
+			<a href="galeria.html" aria-current="page">Galería</a>
+			<a href="paquetes.html">Paquetes</a>
+			<a href="Contactos.html">Contacto</a>
+		</nav>
+	</header>
+	<button class="evora-menu-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1" hidden></button>
+
+	<main>
+		<section class="gallery-hero">
+			<div class="gallery-shell gallery-hero-layout">
+				<div class="gallery-hero-copy">
+					<span class="eyebrow">Historias ÉVORA</span>
+					<h1>Momentos que merecen volver a vivirse.</h1>
+					<p>Celebraciones pensadas con intención, donde cada espacio, encuentro y detalle cuenta una historia propia.</p>
+					<a class="btn btn-primary" href="#coleccion">Recorrer la galería</a>
+				</div>
+				<figure class="gallery-hero-image">
+					<video
+						class="gallery-hero-video"
+						autoplay
+						muted
+						loop
+						playsinline
+						preload="metadata"
+						poster="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=85"
+						aria-label="Video de una celebración elegante">
+						<source src="MEDIA/galeria-portada.mp4" type="video/mp4">
+						Tu navegador no admite la reproducción de este video.
+					</video>
+					<figcaption>Una celebración íntima, diseñada alrededor de su historia.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section class="gallery-collection" id="coleccion" aria-labelledby="gallery-title">
+			<div class="gallery-shell">
+				<header class="gallery-heading">
+					<span class="eyebrow">Celebraciones con identidad</span>
+					<h2 id="gallery-title">Una mirada a nuestros momentos</h2>
+					<p>De encuentros íntimos a grandes celebraciones, cada proyecto nace de una idea y se convierte en un recuerdo compartido.</p>
+				</header>
+
+				<div class="gallery-grid">
+					<figure class="gallery-item gallery-item-tall">
+						<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=80" alt="Mesa de recepción de boda con arreglos florales y velas" loading="lazy">
+						<figcaption><span>Bodas</span><strong>Una mesa para celebrar juntos</strong></figcaption>
+					</figure>
+					<figure class="gallery-item">
+						<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Costa iluminada al atardecer, escenario de una celebración junto al mar" loading="lazy">
+						<figcaption><span>Bodas destino</span><strong>El mar como testigo</strong></figcaption>
+					</figure>
+					<figure class="gallery-item">
+						<img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80" alt="Invitados reunidos en una celebración elegante" loading="lazy">
+						<figcaption><span>Ocasiones especiales</span><strong>Una noche para recordar</strong></figcaption>
+					</figure>
+					<figure class="gallery-item">
+						<img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80" alt="Salón preparado para una cena de celebración" loading="lazy">
+						<figcaption><span>Celebraciones</span><strong>Detalles que reúnen</strong></figcaption>
+					</figure>
+					<figure class="gallery-item gallery-item-wide">
+						<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80" alt="Espacio preparado para un evento con iluminación cálida" loading="lazy">
+						<figcaption><span>Diseño y producción</span><strong>Un espacio transformado para la ocasión</strong></figcaption>
+					</figure>
+					<figure class="gallery-item">
+						<img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80" alt="Decoración festiva con globos para una ocasión especial" loading="lazy">
+						<figcaption><span>Ocasiones especiales</span><strong>Celebrar cada capítulo</strong></figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery-invitation">
+			<div class="gallery-shell gallery-invitation-inner">
+				<div>
+					<span class="eyebrow">Tu historia también merece su espacio</span>
+					<h2>Imaginemos lo que viene.</h2>
+				</div>
+				<a class="btn btn-primary" href="Contactos.html">Conversemos sobre tu evento</a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="evora-footer">
+		<div class="evora-footer-main">
+			<div class="evora-footer-about">
+				<a class="evora-footer-logo" href="index.html" aria-label="ÉVORA - Inicio">ÉVORA<small>EXPERIENCES · EVENTS</small></a>
+				<p class="evora-footer-description">Creamos celebraciones memorables con creatividad, planificación y cuidado en cada detalle.</p>
+				<span class="evora-footer-tagline">Cada detalle, perfectamente planeado.</span>
+			</div>
+			<div class="evora-footer-column">
+				<h3>Explora</h3>
+				<a href="index.html">Inicio</a>
+				<a href="nosotros.html">Nosotros</a>
+				<a href="paquetes.html">Paquetes</a>
+				<a href="blog.html">Blog</a>
+			</div>
+			<div class="evora-footer-column">
+				<h3>Experiencias</h3>
+				<a href="bodas.html">Bodas</a>
+				<a href="bodas-destino.html">Bodas destino</a>
+				<a href="ocasiones-especiales.html">Ocasiones especiales</a>
+				<a href="galeria.html">Galería</a>
+			</div>
+			<div class="evora-footer-column evora-footer-contact">
+				<h3>Tu próxima celebración</h3>
+				<p>Cuéntanos qué estás imaginando y diseñemos una experiencia a tu medida.</p>
+				<a class="evora-footer-link-contact" href="Contactos.html">Hablemos de tu evento</a>
+			</div>
+		</div>
+		<div class="evora-footer-bottom">
+			<p>&copy; 2026 ÉVORA. Todos los derechos reservados.</p>
+			<p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
+			<a href="#inicio">Volver arriba</a>
+		</div>
+	</footer>
+	<script src="SCRIPT/general.js"></script>
+</body>
+</html>
