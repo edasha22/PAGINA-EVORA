@@ -1,0 +1,823 @@
+/* ÉVORA — BLOG | Estilos ordenados y encabezado/pie de Paquetes */
+
+/* 1. PALETA OFICIAL */
+:root {
+    --navy: #0B1320;
+    --gold: #D4B483;
+    --ivory: #FAF8F4;
+    --charcoal: #1E293B;
+    --gray: #64748B;
+    --light: #F1F5F9;
+}
+
+/* 2. ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--charcoal);
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1, h2, h3, .brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+.icono {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* 3. ENCABEZADO FIJO */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 6%;
+    background-color: var(--ivory);
+    border-bottom: 1px solid rgba(11, 19, 32, 0.10);
+}
+
+.brand {
+    color: var(--navy);
+    font-size: 39px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.brand small {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 22px;
+}
+
+.nav a {
+    padding: 9px 0;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 300ms ease;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--charcoal);
+    border-bottom: 2px solid var(--gold);
+}
+
+
+/* ==========================================
+   12. PIE DE PÁGINA MÁS COMPLETO
+========================================== */
+
+.footer {
+    padding: 67px 6% 0;
+    color: white;
+    background-color: #080F1A;
+    border-top: 1px solid rgba(212, 180, 131, 0.35);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.7fr 0.75fr 1fr 1.1fr;
+    gap: clamp(22px, 3vw, 56px);
+    max-width: 1450px;
+    margin: 0 auto;
+    padding-bottom: 58px;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 47px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 1;
+}
+
+.footer-logo small {
+    display: block;
+    margin-top: 10px;
+    color: #E8E0D6;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.footer-description {
+    max-width: 310px;
+    margin: 25px 0 20px;
+    color: #DBDFE4;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-tagline {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.footer-column h3 {
+    margin-bottom: 12px;
+    color: var(--gold);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.footer-column > a:not(.footer-link-contact) {
+    color: #E8EAF0;
+    font-size: 12px;
+    transition: color 300ms ease;
+}
+
+.footer-column > a:hover {
+    color: var(--gold);
+}
+
+.footer-contact p {
+    color: #DBDFE4;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-link-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 9px;
+    padding-bottom: 7px;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 300ms ease;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 17px;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 19px 0 23px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-bottom p {
+    color: #C4CBD5;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+}
+
+.footer-bottom > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold);
+    font-size: 11px;
+}
+
+
+/* BLOG: ESTILOS GENERALES */
+body {
+    overflow-x:hidden
+}
+
+h1,h2,h3,p,figure {
+    margin:0
+}
+
+h1,h2,h3 {
+    font-weight:600
+}
+
+img {
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover
+}
+
+.kicker {
+    font-family:Inter,'Segoe UI',sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--gray)
+}
+
+h1 {
+    font-size:clamp(50px,6.6vw,106px);
+    line-height:.88;
+    letter-spacing:-.02em
+}
+
+h2 {
+    font-size:clamp(36px,4.4vw,72px);
+    line-height:.98
+}
+
+em {
+    font-weight:500;
+    color:var(--gray)
+}
+
+.gold-rule {
+    width:86px;
+    height:2px;
+    background:var(--gold);
+    margin:28px 0
+}
+
+.button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px;
+    margin-top:26px;
+    padding:13px 22px;
+    background:var(--navy);
+    color:white;
+    border-radius:16px;
+    font-size:12px;
+    font-weight:600;
+    transition:background .3s,transform .3s
+}
+
+.button span {
+    font-size:20px;
+    line-height:1
+}
+
+.button:hover {
+    background:var(--charcoal);
+    transform:translateY(-2px)
+}
+
+.button.light {
+    background:var(--ivory);
+    color:var(--navy)
+}
+
+.button.light:hover {
+    background:var(--gold)
+}
+
+/* CAPÍTULOS DE HISTORIAS */
+.chapter {
+    scroll-margin-top:120px
+}
+
+.chapter-content .kicker {
+    color:var(--gray);
+    margin-bottom:10px
+}
+
+.chapter-content h2 {
+    margin-bottom:18px;
+    color:var(--navy);
+    font-size:clamp(37px,4.1vw,65px);
+    line-height:.98
+}
+
+.chapter-content h3 {
+    font-size:28px;
+    margin:20px 0 3px;
+    color:var(--navy)
+}
+
+.chapter-content p {
+    font-size:12px;
+    line-height:1.8;
+    margin-bottom:9px
+}
+
+.chapter-content .story-lede {
+    font-size:14px;
+    line-height:1.7;
+    color:var(--charcoal);
+    margin-bottom:20px
+}
+
+.chapter-number {
+    display:block;
+    color:var(--gray);
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:600;
+    margin-bottom:12px
+}
+
+.takeaway {
+    padding:17px 19px!important;
+    background:var(--light);
+    border-left:3px solid var(--gold);
+    border-radius:0 12px 12px 0;
+    margin-top:17px
+}
+
+.takeaway strong {
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-size:10px;
+    margin-bottom:4px
+}
+
+.chapter-photo img {
+    height:100%;
+    min-height:350px
+}
+
+/* MODELO 4: ÁLBUM EDITORIAL */
+.hero-album {
+    background:linear-gradient(145deg,#FAF8F4 42%,#F1F5F9 100%);
+    padding:65px 6% 50px;
+    min-height:780px;
+    position:relative
+}
+
+.album-heading {
+    text-align:center;
+    max-width:850px;
+    margin:0 auto
+}
+
+.album-heading h1 {
+    margin:15px 0;
+    font-size:clamp(58px,6vw,97px)
+}
+
+.album-heading p:last-child {
+    font-size:13px;
+    max-width:500px;
+    margin:0 auto;
+    color:var(--gray)
+}
+
+.album-photos {
+    max-width:1120px;
+    margin:45px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1.25fr 1fr;
+    gap:15px;
+    align-items:center
+}
+
+.album-photos figure {
+    padding:12px 12px 17px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-radius:16px
+}
+
+.album-photos img {
+    height:265px;
+    border-radius:9px
+}
+
+.album-photos figcaption {
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:20px;
+    margin:10px 0 0 5px
+}
+
+.album-one {
+    transform:rotate(-4deg)
+}
+
+.album-two {
+    transform:translateY(25px) rotate(2.5deg)
+}
+
+.album-three {
+    transform:rotate(5deg)
+}
+
+.album-down {
+    display:block;
+    width:max-content;
+    margin:65px auto 0;
+    font-size:10px;
+    letter-spacing:2px;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:9px
+}
+
+.album-down span {
+    color:var(--gold);
+    font-size:20px;
+    vertical-align:middle
+}
+
+.album-index {
+    padding:90px 6%;
+    background:var(--light)
+}
+
+.album-title {
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 40px
+}
+
+.album-title h2 {
+    margin-top:10px
+}
+
+.album-cards {
+    display:grid;
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    gap:17px
+}
+
+.album-card {
+    grid-column:span 2;
+    background:white;
+    padding:12px 12px 22px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06)
+}
+
+.album-card:nth-child(-n+2) {
+    grid-column:span 3
+}
+
+.album-card-photo {
+    overflow:hidden;
+    border-radius:9px
+}
+
+.album-card img {
+    height:225px
+}
+
+.album-card:nth-child(-n+2) img {
+    height:300px
+}
+
+.album-card p {
+    font-size:9px;
+    letter-spacing:1.6px;
+    color:var(--gray);
+    padding:15px 7px 3px
+}
+
+.album-card h3 {
+    font-size:37px;
+    line-height:1;
+    padding:0 7px 14px
+}
+
+.album-card span {
+    font-size:11px;
+    padding:0 7px;
+    font-weight:600
+}
+
+.album-chapters {
+    padding:75px 6% 90px
+}
+
+.album-chapters .chapter {
+    display:grid;
+    grid-template-columns:41% 59%;
+    gap:3%;
+    padding:47px 0;
+    border-top:1px solid #DCE0E3
+}
+
+.album-chapters .chapter:nth-of-type(even) {
+    grid-template-columns:59% 41%
+}
+
+.album-chapters .chapter:nth-of-type(even) .chapter-photo {
+    order:2
+}
+
+.album-chapters .chapter:nth-of-type(even) .chapter-content {
+    order:1
+}
+
+.album-chapters .chapter-photo {
+    min-height:490px
+}
+
+.album-chapters .chapter-photo img {
+    border-radius:24px
+}
+
+.album-chapters .chapter-content {
+    padding:12px 9% 0 6%
+}
+
+@media(max-width:800px) {
+    .hero-album {
+        min-height:0
+    }
+
+    .album-photos img {
+        height:180px
+    }
+
+    .album-photos figcaption {
+        font-size:15px
+    }
+
+    .album-card {
+        grid-column:span 3
+    }
+
+    .album-card:nth-child(-n+2) {
+        grid-column:span 3
+    }
+
+    .album-chapters .chapter,.album-chapters .chapter:nth-of-type(even) {
+        grid-template-columns:1fr
+    }
+
+    .album-chapters .chapter .chapter-photo,.album-chapters .chapter .chapter-content {
+        order:initial!important;
+        padding:0!important
+    }
+
+    .album-chapters .chapter-photo {
+        height:290px;
+        min-height:290px
+    }
+
+}
+
+@media(max-width:550px) {
+    .album-photos {
+        display:flex;
+        flex-direction:column;
+        align-items:stretch
+    }
+
+    .album-photos figure {
+        transform:none!important
+    }
+
+    .album-photos img {
+        height:185px
+    }
+
+    .album-photos figure:nth-child(3) {
+        display:none
+    }
+
+    .album-cards {
+        grid-template-columns:1fr
+    }
+
+    .album-card,.album-card:nth-child(-n+2) {
+        grid-column:auto
+    }
+
+    .album-card img,.album-card:nth-child(-n+2) img {
+        height:250px
+    }
+
+    .album-down {
+        margin-top:32px
+    }
+
+}
+
+@media(max-width:700px) {
+    .chapter-content h2 {
+        font-size:43px
+    }
+
+    .chapter-photo img {
+        min-height:220px
+    }
+
+}
+
+/* Adaptación del pie de página original de Paquetes */
+@media (max-width: 1100px) {
+    .footer-main {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        row-gap: 42px;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .footer {
+        padding: 48px 22px 0;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-about, .footer-contact {
+        grid-column: auto;
+    }
+
+}
+
+/* ==========================================
+   15. MENÚ HAMBURGUESA RESPONSIVO
+   No modifica el diseño de escritorio.
+========================================== */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid rgba(11, 19, 32, 0.18);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 23px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--navy);
+    transition: transform 250ms ease, opacity 250ms ease;
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+@media (max-width: 880px) {
+    .header {
+        position: sticky;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        text-align: left;
+        padding: 15px 6%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        display: none;
+        width: 100%;
+        max-height: calc(100dvh - 84px);
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 10px 6% 18px;
+        background: var(--ivory);
+        border-bottom: 1px solid rgba(11, 19, 32, 0.12);
+        box-shadow: 0 14px 24px rgba(11, 19, 32, 0.10);
+    }
+
+    .nav.is-open {
+        display: flex;
+    }
+
+    .nav a {
+        width: 100%;
+        padding: 13px 4px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(11, 19, 32, 0.08);
+    }
+
+    .nav a:hover,
+    .nav a.active {
+        border-bottom: 1px solid var(--gold);
+    }
+
+    .menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-toggle span {
+        transition: none;
+    }
+}
+
+/* Navegación por anclas con encabezado fijo. */
+#historias, #consejos, .chapter {
+    scroll-margin-top: 110px;
+}

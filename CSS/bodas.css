@@ -1,0 +1,262 @@
+.bodas-page {
+            --bodas-gold: #b89a68;
+            --bodas-muted: #64748b;
+            color: var(--color-charcoal);
+        }
+        .bodas-hero {
+            align-items: center;
+            background: linear-gradient(90deg, rgba(11,19,32,.88), rgba(11,19,32,.55) 58%, rgba(11,19,32,.12)), url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85") center 48% / cover;
+            display: flex;
+            min-height: 530px;
+        }
+        .bodas-hero-inner {
+            margin: auto;
+            max-width: 1280px;
+            padding: clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px);
+            width: 100%;
+        }
+        .bodas-hero-content {
+            max-width: 720px;
+        }
+        .bodas-eyebrow,
+        .bodas-kicker {
+            color: var(--bodas-gold);
+            display: block;
+            font-size: .76rem;
+            font-weight: 600;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+        }
+        .bodas-hero h1 {
+            color: #fff;
+            font-size: clamp(3rem, 7vw, 5.4rem);
+            line-height: 1.02;
+            margin: 18px 0;
+            max-width: 680px;
+        }
+        .bodas-hero p {
+            color: #eef0f3;
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            margin-bottom: 28px;
+            max-width: 620px;
+        }
+        .bodas-hero .btn-primary {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            color: var(--color-midnight);
+        }
+        .bodas-hero .btn-primary:hover {
+            background: #e1c99f;
+            border-color: #e1c99f;
+        }
+        .bodas-section {
+            margin: auto;
+            max-width: 1200px;
+            padding: clamp(58px, 8vw, 92px) 24px;
+        }
+        .bodas-section-heading {
+            margin: 0 auto 38px;
+            max-width: 720px;
+            text-align: center;
+        }
+        .bodas-section-heading h2 {
+            font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+            margin: 10px 0;
+        }
+        .bodas-section-heading p {
+            color: var(--bodas-muted);
+        }
+        .bodas-plans {
+            display: grid;
+            gap: 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .bodas-plan {
+            background: var(--color-white);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-premium);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            padding: clamp(22px, 3vw, 30px);
+        }
+        .bodas-plan-number {
+            align-items: center;
+            border: 1px solid var(--bodas-gold);
+            border-radius: 50%;
+            color: #8b7146;
+            display: inline-flex;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            height: 42px;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 42px;
+        }
+        .bodas-plan h3 {
+            font-size: 1.65rem;
+            margin-bottom: 10px;
+        }
+        .bodas-plan > p {
+            color: var(--bodas-muted);
+            min-height: 76px;
+        }
+        .bodas-plan ul {
+            border-top: 1px solid #e2e8f0;
+            display: grid;
+            gap: 11px;
+            list-style: none;
+            margin: 20px 0 24px;
+            padding-top: 18px;
+        }
+        .bodas-plan li {
+            color: #475569;
+            font-size: .9rem;
+            padding-left: 20px;
+            position: relative;
+        }
+        .bodas-plan li::before {
+            color: var(--bodas-gold);
+            content: "✓";
+            font-weight: 700;
+            left: 0;
+            position: absolute;
+        }
+        .bodas-plan .btn {
+            margin-top: auto;
+            width: 100%;
+        }
+        .bodas-featured {
+            background: var(--color-midnight);
+            color: var(--color-ivory);
+        }
+        .bodas-featured-inner {
+            align-items: center;
+            display: grid;
+            gap: 42px;
+            grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr);
+            margin: auto;
+            max-width: 1200px;
+            padding: clamp(48px, 7vw, 78px) 24px;
+        }
+        .bodas-featured h2 {
+            color: var(--color-ivory);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin: 12px 0;
+        }
+        .bodas-featured p {
+            color: #d7dce4;
+            max-width: 620px;
+        }
+        .bodas-featured-points {
+            border-left: 1px solid rgba(212,180,131,.55);
+            display: grid;
+            gap: 16px;
+            list-style: none;
+            padding-left: 26px;
+        }
+        .bodas-featured-points li {
+            color: #f1f2f4;
+        }
+        .bodas-process {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .bodas-process article {
+            border-top: 2px solid var(--bodas-gold);
+            padding: 20px 4px 0;
+        }
+        .bodas-process span {
+            color: var(--bodas-gold);
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+        .bodas-process h3 {
+            font-size: 1.55rem;
+            margin: 8px 0;
+        }
+        .bodas-process p {
+            color: var(--bodas-muted);
+            font-size: .92rem;
+        }
+        .bodas-destination {
+            background: #f1f5f9;
+            padding: 54px 20px;
+            text-align: center;
+        }
+        .bodas-destination h2 {
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            margin: 10px 0;
+        }
+        .bodas-destination p {
+            color: var(--bodas-muted);
+            margin: 0 auto 20px;
+            max-width: 650px;
+        }
+        .bodas-cta {
+            padding: clamp(54px, 8vw, 82px) 20px;
+            text-align: center;
+        }
+        .bodas-cta h2 {
+            font-size: clamp(2rem, 4vw, 2.9rem);
+            margin: 10px 0;
+        }
+        .bodas-cta p {
+            color: var(--bodas-muted);
+            margin: 0 auto 22px;
+            max-width: 650px;
+        }
+        .bodas-cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .bodas-plans {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .bodas-plan:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+        @media (max-width: 640px) {
+            .bodas-hero {
+                min-height: 480px;
+                background-position: 58% center;
+            }
+            .bodas-section {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .bodas-plans,
+            .bodas-featured-inner,
+            .bodas-process {
+                grid-template-columns: 1fr;
+            }
+            .bodas-plan:last-child {
+                grid-column: auto;
+            }
+            .bodas-plan > p {
+                min-height: 0;
+            }
+            .bodas-featured-points {
+                border-left: 0;
+                border-top: 1px solid rgba(212,180,131,.55);
+                padding: 20px 0 0;
+            }
+            .bodas-cta-actions .btn {
+                width: 100%;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .bodas-page *,
+            .bodas-page *::before,
+            .bodas-page *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+        }

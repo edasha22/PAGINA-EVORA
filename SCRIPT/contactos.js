@@ -1,8 +1,7 @@
 const contactConfig = {
-  whatsappPhone: '+51 907 559 562',
-  email: '',
-  address: '',
-  mapUrl: '',
+  email: 'happyholasxd@gmail.com',
+  address: 'República Federal de Alemania, Chiclayo, Perú',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=Rep%C3%BAblica%20Federal%20de%20Alemania%2C%20Chiclayo%2C%20Per%C3%BA',
   socials: {
     Instagram: '',
     Facebook: '',
@@ -10,14 +9,8 @@ const contactConfig = {
   }
 };
 
-const whatsappUrl = contactConfig.whatsappPhone
-  ? `https://wa.me/${contactConfig.whatsappPhone.replace(/\D/g, '')}?text=${encodeURIComponent('Hola, quisiera recibir información sobre sus servicios.')}`
-  : '';
-
 document.querySelectorAll('[data-contact-value="whatsapp"]').forEach((element) => {
-  if (whatsappUrl) {
-    element.textContent = `Atención directa al ${contactConfig.whatsappPhone}.`;
-  }
+  element.textContent = 'No disponible por ahora.';
 });
 
 document.querySelectorAll('[data-contact-value="email"]').forEach((element) => {
@@ -42,16 +35,7 @@ document.querySelectorAll('[data-contact-link="map"]').forEach((link) => {
 });
 
 document.querySelectorAll('[data-contact-link="whatsapp"]').forEach((link) => {
-  if (whatsappUrl) {
-    link.href = whatsappUrl;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.setAttribute('aria-label', 'Contactar por WhatsApp');
-
-    if (link.classList.contains('detail-link')) {
-      link.hidden = false;
-    }
-  }
+  link.hidden = true;
 });
 
 document.querySelectorAll('[data-contact-link="email"]').forEach((link) => {

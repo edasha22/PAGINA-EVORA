@@ -3,288 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Confirma tu asistencia a una celebración especial con EVORA.">
-    <title>Confirmar asistencia | EVORA</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        .rsvp-portada {
-            padding: 75px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #f8e5eb, #fffaf0 60%, #f1e3d3);
-        }
-        .rsvp-portada h1 {
-            max-width: 850px;
-            margin: 18px auto;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #59443e;
-        }
-        .rsvp-portada p {
-            max-width: 650px;
-            margin: 0 auto 25px;
-            color: #80645b;
-        }
-        .rsvp-contenedor {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .rsvp-intro {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .rsvp-intro h2 {
-            margin-bottom: 12px;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-        }
-        .rsvp-tarjeta {
-            padding: 38px;
-            background: #fff;
-            border: 1px solid #efdfdc;
-            border-radius: 22px;
-            box-shadow: 0 15px 40px rgba(128, 100, 91, .12);
-        }
-        .rsvp-tarjeta h3 {
-            margin-bottom: 8px;
-            font: normal 1.6rem Georgia, serif;
-            color: #80645b;
-        }
-        .rsvp-ayuda {
-            margin-bottom: 25px;
-            color: #88736b;
-            font-size: .92rem;
-        }
-        .rsvp-formulario {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .rsvp-campo {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .rsvp-campo.completo {
-            grid-column: 1 / -1;
-        }
-        .rsvp-campo label {
-            font-weight: 600;
-            color: #65534e;
-        }
-        .rsvp-campo input,
-        .rsvp-campo select,
-        .rsvp-campo textarea {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #e8d8d3;
-            border-radius: 11px;
-            background: #fffdfb;
-            color: #65534e;
-            font: inherit;
-        }
-        .rsvp-campo input:focus,
-        .rsvp-campo select:focus,
-        .rsvp-campo textarea:focus {
-            outline: 2px solid #e8b7c8;
-            border-color: #d99caf;
-        }
-        .rsvp-campo textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-        .rsvp-nota {
-            grid-column: 1 / -1;
-            padding: 15px;
-            border-radius: 12px;
-            background: #fff1f4;
-            color: #80645b;
-            font-size: .92rem;
-        }
-        .rsvp-enviar {
-            grid-column: 1 / -1;
-            text-align: center;
-        }
-        .rsvp-enviar button {
-            width: 100%;
-            font: inherit;
-            cursor: pointer;
-        }
-        .rsvp-resultado {
-            display: none;
-            margin-top: 22px;
-            padding: 20px;
-            border-radius: 12px;
-            background: #f8e5eb;
-            color: #59443e;
-            line-height: 1.7;
-        }
-        .rsvp-resultado.visible {
-            display: block;
-        }
-        .rsvp-final {
-            padding: 50px 20px;
-            text-align: center;
-            background: #fff1f4;
-        }
-        .rsvp-final h2 {
-            margin-bottom: 12px;
-        }
-        @media (max-width: 600px) {
-            .rsvp-portada {
-                padding: 50px 20px;
-            }
-            .rsvp-contenedor {
-                margin: 40px auto;
-                padding: 0 15px;
-            }
-            .rsvp-tarjeta {
-                padding: 23px;
-            }
-            .rsvp-formulario {
-                grid-template-columns: 1fr;
-            }
-            .rsvp-campo.completo,
-            .rsvp-nota,
-            .rsvp-enviar {
-                grid-column: 1;
-            }
-        }
-    </style>
+    <meta name="description" content="Invitaciones digitales ÉVORA: confirma tu asistencia, registra acompañantes y consulta la asignación de mesa.">
+    <meta name="theme-color" content="#FAF8F4">
+    <title>RSVP Digital | ÉVORA Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/rsvp.css">
 </head>
-<body>
-
-    <header class="encabezado">
-        <a href="index.html" class="logo">EVORA</a>
-        <nav aria-label="Menú principal">
-            <a href="index.html">Inicio</a>
-            <a href="nosotrol.html">Nosotros</a>
-            <a href="bodas.html">Bodas</a>
-            <a href="paquetes.html">Paquetes</a>
-            <a href="galeria.html">Galería</a>
-            <a href="gestion-invitados.html">Invitados</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+<body id="inicio">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+                <span class="logo-title">ÉVORA</span>
+                <span class="logo-sub">EXPERIENCES</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="bodas.html" class="nav-link">Bodas</a>
+                <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+                <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+                <a href="rsvp.html" class="nav-link active" aria-current="page">RSVP Digital</a>
+                <a href="paquetes.html" class="nav-link">Paquetes</a>
+                <a href="Contactos.html" class="btn btn-secondary">Contacto</a>
+            </nav>
+        </div>
+        <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
     </header>
 
-    <main>
-        <section class="rsvp-portada">
-            <p class="subtitulo">UN MOMENTO PARA RECORDAR</p>
-            <h1>Tu presencia hace este día más especial</h1>
-            <p>
-                Cada celebración tiene algo único, y compartirla contigo la hace todavía más bonita. Confirma tu asistencia y ayúdanos a preparar cada detalle con cariño.
-            </p>
-            <a href="#confirmacion" class="boton">Confirmar asistencia ♡</a>
+    <main class="rsvp-page">
+        <section class="rsvp-hero">
+            <div class="rsvp-hero-inner">
+                <div>
+                    <span class="rsvp-eyebrow">Invitaciones y confirmaciones digitales</span>
+                    <h1>Cada invitado, atendido con cuidado.</h1>
+                    <p class="rsvp-hero-copy">Una experiencia sencilla y elegante para confirmar asistencia, organizar acompañantes y preparar cada detalle de tu celebración.</p>
+                    <a href="#confirmacion" class="btn btn-primary">Confirmar asistencia</a>
+                </div>
+                <aside class="rsvp-hero-card" aria-label="Beneficios de RSVP digital">
+                    <span class="rsvp-kicker">RSVP ÉVORA</span>
+                    <h2>Una respuesta clara. Un evento mejor organizado.</h2>
+                    <p>Centraliza la información necesaria para que anfitriones e invitados tengan una experiencia fluida antes del evento.</p>
+                    <ul class="rsvp-hero-points">
+                        <li>Confirmación de asistencia</li>
+                        <li>Registro de acompañantes</li>
+                        <li>Preparación de mesas e invitados</li>
+                    </ul>
+                </aside>
+            </div>
         </section>
 
-        <section class="rsvp-contenedor" id="confirmacion">
-            <div class="rsvp-intro">
-                <p class="subtitulo">CELEBREMOS JUNTOS</p>
+        <section class="rsvp-section" id="confirmacion">
+            <div class="rsvp-section-heading">
+                <span class="rsvp-kicker">Tu invitación digital</span>
                 <h2>¿Nos acompañarás?</h2>
-                <p>Completa el formulario. Te tomará solo un momento.</p>
+                <p>Completa tus datos y cuéntanos si podremos contar contigo. Los campos con * son obligatorios.</p>
             </div>
+            <div class="rsvp-layout">
+                <section class="rsvp-card" aria-labelledby="rsvp-form-title">
+                    <h3 id="rsvp-form-title">Confirma tu asistencia</h3>
+                    <p class="rsvp-form-help">Usaremos estos datos para identificar tu respuesta y organizar a tus acompañantes.</p>
+                    <form id="formRSVP" class="rsvp-form">
+                        <div class="rsvp-field">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Nombres y apellidos" required>
+                        </div>
+                        <div class="rsvp-field">
+                            <label for="correo">Correo electrónico *</label>
+                            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
+                        </div>
+                        <div class="rsvp-field rsvp-field-full">
+                            <label for="evento">Nombre del evento *</label>
+                            <input type="text" id="evento" name="evento" placeholder="Ej. Boda de Ana y Carlos" required>
+                        </div>
+                        <div class="rsvp-field">
+                            <label for="asistencia">¿Podrás asistir? *</label>
+                            <select id="asistencia" name="asistencia" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="Sí asistiré">Sí, asistiré</option>
+                                <option value="No podré asistir">No podré asistir</option>
+                            </select>
+                        </div>
+                        <div class="rsvp-field">
+                            <label for="acompanantes">Acompañantes</label>
+                            <select id="acompanantes" name="acompanantes" disabled aria-describedby="ayuda-acompanantes">
+                                <option value="0">Solo yo</option>
+                                <option value="1">1 acompañante</option>
+                                <option value="2">2 acompañantes</option>
+                                <option value="3">3 acompañantes</option>
+                                <option value="4">4 acompañantes</option>
+                            </select>
+                            <span class="rsvp-field-hint" id="ayuda-acompanantes">Disponible al confirmar tu asistencia.</span>
+                        </div>
+                        <div class="rsvp-field rsvp-field-full">
+                            <label for="mensaje">Mensaje para los anfitriones</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Comparte una nota o necesidad que debamos conocer."></textarea>
+                        </div>
+                        <p class="rsvp-form-note">La asignación de mesa se confirma con los anfitriones una vez revisada la lista final de invitados.</p>
+                        <div class="rsvp-submit">
+                            <button type="submit" class="btn btn-primary">Preparar mi confirmación</button>
+                        </div>
+                    </form>
+                    <div id="mensajeRSVP" class="rsvp-result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+                </section>
 
-            <div class="rsvp-tarjeta">
-                <h3>Tu confirmación</h3>
-                <p class="rsvp-ayuda">Los campos marcados con * son obligatorios.</p>
-
-                <form id="formRSVP" class="rsvp-formulario">
-                    <div class="rsvp-campo">
-                        <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre"
-                            placeholder="Nombres y apellidos" autocomplete="name" required>
-                    </div>
-
-                    <div class="rsvp-campo">
-                        <label for="correo">Correo electrónico *</label>
-                        <input type="email" id="correo" name="correo"
-                            placeholder="nombre@correo.com" autocomplete="email" required>
-                    </div>
-
-                    <div class="rsvp-campo completo">
-                        <label for="evento">Nombre del evento *</label>
-                        <input type="text" id="evento" name="evento"
-                            placeholder="Ej. Boda de Ana y Carlos" required>
-                    </div>
-
-                    <div class="rsvp-campo">
-                        <label for="asistencia">¿Podrás asistir? *</label>
-                        <select id="asistencia" name="asistencia" required>
-                            <option value="">Selecciona una opción</option>
-                            <option value="Sí asistiré">¡Sí, asistiré!</option>
-                            <option value="No podré asistir">No podré asistir</option>
-                        </select>
-                    </div>
-
-                    <div class="rsvp-campo">
-                        <label for="acompanantes">Número de acompañantes</label>
-                        <select id="acompanantes" name="acompanantes">
-                            <option value="0">Voy solo/a</option>
-                            <option value="1">1 acompañante</option>
-                            <option value="2">2 acompañantes</option>
-                            <option value="3">3 acompañantes</option>
-                            <option value="4">4 acompañantes</option>
-                        </select>
-                    </div>
-
-                    <div class="rsvp-campo completo">
-                        <label for="mensaje">Mensaje especial (opcional)</label>
-                        <textarea id="mensaje" name="mensaje"
-                            placeholder="Escribe un mensaje para los organizadores..."></textarea>
-                    </div>
-
-                    <div class="rsvp-nota">
-                        ♡ Gracias por ayudarnos a preparar una celebración inolvidable.
-                    </div>
-
-                    <div class="rsvp-enviar">
-                        <button type="submit" class="boton">Enviar mi confirmación</button>
-                    </div>
-                </form>
-
-                <div id="mensajeRSVP" class="rsvp-resultado"
-                    role="status" aria-live="polite"></div>
+                <aside class="rsvp-aside" aria-label="Resumen de organización del invitado">
+                    <section class="rsvp-aside-card">
+                        <span class="rsvp-kicker">Control de invitados</span>
+                        <h3>Tu información</h3>
+                        <p>La confirmación ayuda a organizar la lista y la atención de cada persona.</p>
+                        <table>
+                            <tbody>
+                                <tr><th scope="row">Asistencia</th><td id="resumen-asistencia" class="rsvp-status">Pendiente</td></tr>
+                                <tr><th scope="row">Acompañantes</th><td id="resumen-acompanantes">Se indican en el formulario</td></tr>
+                                <tr><th scope="row">Mesa asignada</th><td>Por confirmar</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="rsvp-aside-note">La mesa se asigna y comunica por la organización del evento; esta página no consulta una lista de invitados.</p>
+                    </section>
+                    <section class="rsvp-aside-card">
+                        <span class="rsvp-kicker">¿Necesitas ayuda?</span>
+                        <h3>Estamos para apoyarte</h3>
+                        <p>Si necesitas actualizar tus datos o tienes dudas sobre tu invitación, contacta a nuestro equipo.</p>
+                        <a class="btn btn-secondary" href="Contactos.html">Contactar a ÉVORA</a>
+                    </section>
+                </aside>
             </div>
         </section>
 
-        <section class="rsvp-final">
-            <h2>Los mejores recuerdos se crean juntos</h2>
-            <p>En EVORA, cada detalle cuenta y cada invitado es especial.</p>
-            <a href="contacto.html" class="boton">Contactar con EVORA</a>
+        <section class="rsvp-contact">
+            <span class="rsvp-kicker">Organización con atención al detalle</span>
+            <p>Una celebración memorable empieza con una experiencia bien coordinada.</p>
+            <a href="bodas.html" class="btn btn-secondary">Conoce nuestras bodas</a>
         </section>
     </main>
 
-    <footer>
-        <p class="logo-footer">EVORA</p>
-        <p>Diseñamos momentos, creamos recuerdos.</p>
-        <p>
-            <a href="index.html">Inicio</a> |
-            <a href="galeria.html">Galería</a> |
-            <a href="contacto.html">Contacto</a>
-        </p>
-        <p>&copy; 2026 EVORA. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-about">
+                <a class="footer-logo" href="index.html" aria-label="ÉVORA - Inicio">
+                    ÉVORA
+                    <small>EXPERIENCES · EVENTS</small>
+                </a>
+                <p class="footer-description">Creamos celebraciones memorables a través de la creatividad, la planificación y el cuidado de cada detalle.</p>
+                <span class="footer-tagline">Cada detalle, perfectamente planeado.</span>
+            </div>
+            <div class="footer-column">
+                <h3>Explora</h3>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="paquetes.html">Paquetes</a>
+                <a href="blog.html">Nuestro blog</a>
+            </div>
+            <div class="footer-column">
+                <h3>Experiencias</h3>
+                <a href="bodas.html">Bodas</a>
+                <a href="bodas-destino.html">Bodas destino</a>
+                <a href="eventos-corporativos.html">Eventos corporativos</a>
+                <a href="ocasiones-especiales.html">Ocasiones especiales</a>
+                <a href="rsvp.html">RSVP Digital</a>
+                <a href="gestion-invitados.html">Gestión de invitados</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+            <div class="footer-column footer-contact">
+                <h3>Comienza tu historia</h3>
+                <p>¿Tienes una fecha especial en mente? Estamos aquí para ayudarte a planearla.</p>
+                <a class="footer-link-contact" href="Contactos.html">
+                    Hablemos de tu evento
+                    <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+            <p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
+            <a href="#inicio">
+                Volver arriba
+                <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 19V5"></path>
+                    <path d="m5 12 7-7 7 7"></path>
+                </svg>
+            </a>
+        </div>
     </footer>
 
-    <script>
-        const form = document.getElementById("formRSVP");
-        const resultado = document.getElementById("mensajeRSVP");
-
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const nombre = document.getElementById("nombre").value.trim();
-            const evento = document.getElementById("evento").value.trim();
-            const asistencia = document.getElementById("asistencia").value;
-            const acompanantes = document.getElementById("acompanantes").value;
-
-            resultado.classList.add("visible");
-            resultado.textContent = asistencia === "Sí asistiré"
-                ? "¡Qué alegría, " + nombre + "! Tu respuesta para " + evento +
-                  " es: " + asistencia + ". Acompañantes: " + acompanantes +
-                  ". ¡Gracias por formar parte de este día especial!"
-                : "Gracias por avisarnos, " + nombre + ". Hemos registrado tu respuesta en esta pantalla para " +
-                  evento + ". Lamentamos que no puedas acompañarnos.";
-
-            resultado.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        });
-    </script>
+    <script src="SCRIPT/general.js"></script>
+    <script src="SCRIPT/rsvp.js"></script>
 </body>
 </html>
