@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contacta a ÉVORA para solicitar una cotización, reservar una cita o resolver tus dudas sobre eventos y bodas destino.">
-  <meta name="theme-color" content="#FAF8F4">
-  <title>Contacto | ÉVORA Experiences</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
-  <link rel="stylesheet" href="CSS/Contactos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a ÉVORA para cotizaciones, citas y consultas sobre eventos.">
+    <title>Contacto | ÉVORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="CSS/Contactos.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
-        <span class="logo-title">ÉVORA</span>
-        <span class="logo-sub">EXPERIENCES</span>
-      </a>
+<body id="inicio" class="pagina-contacto">
 
-      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <!-- 1. ENCABEZADO -->
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="ÉVORA - Ir al inicio">
+            ÉVORA
+            <small>EXPERIENCES · EVENTS</small>
+        </a>
 
-      <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="nosotros.html" class="nav-link">Nosotros</a>
-        <a href="bodas.html" class="nav-link">Bodas</a>
-        <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
-        <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
-        <a href="rsvp.html" class="nav-link">RSVP Digital</a>
-        <a href="paquetes.html" class="nav-link">Paquetes</a>
-        <a href="Contactos.html" class="btn btn-secondary" aria-current="page">Contacto</a>
-      </nav>
-    </div>
-    <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
-  </header>
+        <!-- Menú hamburguesa para celulares -->
+        <button class="menu-toggle" type="button"
+                aria-label="Abrir menú" aria-controls="main-navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="main-navigation" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="bodas.html">Bodas</a>
+            <a href="eventos-corporativos.html">Eventos</a>
+            <a href="paquetes.html">Paquetes</a>
+            <a href="blog.html">Blog</a>
+            <a href="Contactos.html" class="active" aria-current="page">Contacto</a>
+        </nav>
+    </header>
 
   <main>
     <section class="contact-hero">
@@ -47,7 +46,7 @@
           <span class="eyebrow">Hablemos de tu celebración</span>
           <h1>Cada gran experiencia comienza con una conversación.</h1>
           <p>Cuéntanos qué estás imaginando. Nuestro equipo puede ayudarte a planear una boda destino, un evento especial o una celebración corporativa.</p>
-          <a class="btn btn-primary" href="#opciones-contacto">Explorar opciones</a>
+          <a class="contact-button" href="#opciones-contacto">Explorar opciones</a>
         </div>
         <aside class="contact-hero-note" aria-label="Atención personalizada">
           <span class="contact-note-mark" aria-hidden="true">É</span>
@@ -111,7 +110,7 @@
                 <label for="quote-details">Cuéntanos un poco más</label>
                 <textarea id="quote-details" name="detalles" rows="3" placeholder="Destino, estilo o cualquier detalle importante"></textarea>
               </div>
-              <button class="btn btn-primary form-submit" type="submit">Preparar solicitud</button>
+              <button class="contact-button form-submit" type="submit">Preparar solicitud</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </article>
@@ -159,7 +158,7 @@
                 <label for="appointment-details">Comentario o detalle (opcional)</label>
                 <textarea id="appointment-details" name="comentario" rows="3" maxlength="500" placeholder="¿Hay algo que debamos saber antes de la cita?"></textarea>
               </div>
-              <button class="btn btn-primary form-submit" type="submit">Preparar cita</button>
+              <button class="contact-button form-submit" type="submit">Preparar cita</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </article>
@@ -189,7 +188,7 @@
                 <label for="message-body">Mensaje</label>
                 <textarea id="message-body" name="mensaje" rows="5" required></textarea>
               </div>
-              <button class="btn btn-primary form-submit" type="submit">Preparar mensaje</button>
+              <button class="contact-button form-submit" type="submit">Preparar mensaje</button>
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </article>
@@ -236,41 +235,104 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container grid-12">
-      <div class="col-6">
-        <div class="logo footer-logo">
-          <span class="logo-title">ÉVORA</span>
-          <span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span>
+    <!-- 8. PIE DE PÁGINA COMPLETO -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-about">
+                <a class="footer-logo" href="index.html" aria-label="ÉVORA - Inicio">
+                    ÉVORA
+                    <small>EXPERIENCES · EVENTS</small>
+                </a>
+                <p class="footer-description">
+                    Creamos celebraciones memorables a través de la
+                    creatividad, la planificación y el cuidado de cada detalle.
+                </p>
+                <span class="footer-tagline">Cada detalle, perfectamente planeado.</span>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explora</h3>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="paquetes.html">Paquetes</a>
+                <a href="blog.html">Nuestro blog</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Experiencias</h3>
+                <a href="bodas.html">Bodas</a>
+                <a href="bodas-destino.html">Bodas destino</a>
+                <a href="eventos-corporativos.html">Eventos corporativos</a>
+                <a href="paquetes.html#comparar">Comparar paquetes</a>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3>Comienza tu historia</h3>
+                <p>¿Tienes una fecha especial en mente? Estamos aquí para ayudarte a planearla.</p>
+                <a class="footer-link-contact" href="Contactos.html">
+                    Hablemos de tu evento
+                    <svg class="icono" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
-        <p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos premium con atención personalizada.</p>
-      </div>
-      <div class="col-6">
-        <h2 class="footer-heading">Navegación del sitio</h2>
-        <ul class="footer-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="bodas.html">Bodas</a></li>
-          <li><a href="bodas-destino.html">Bodas Destino</a></li>
-          <li><a href="eventos-corporativos.html">Eventos Corporativos</a></li>
-          <li><a href="ocasiones-especiales.html">Ocasiones Especiales</a></li>
-          <li><a href="rsvp.html">RSVP Digital</a></li>
-          <li><a href="gestion-invitados.html">Gestión de Invitados</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="paquetes.html">Paquetes</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="Contactos.html" aria-current="page">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
 
-  <a class="whatsapp-float whatsapp-configurable" data-contact-link="whatsapp" href="#contacto-whatsapp" aria-label="Escríbenos por WhatsApp">
-    <span aria-hidden="true">↗</span>
-    <span>WhatsApp</span>
-  </a>
+        <div class="footer-bottom">
+            <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+            <p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
+            <a href="#inicio">
+                Volver arriba
+                <svg class="icono" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M12 19V5"></path>
+                    <path d="m5 12 7-7 7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
 
-  <script src="SCRIPT/general.js"></script>
-  <script src="SCRIPT/contactos.js"></script>
+    <!-- Control del menú hamburguesa sin necesitar otro archivo JS -->
+    <script>
+        const botonMenu = document.querySelector('.menu-toggle');
+        const navegacion = document.querySelector('#main-navigation');
+
+        function cerrarMenu() {
+            botonMenu.classList.remove('is-open');
+            navegacion.classList.remove('is-open');
+            botonMenu.setAttribute('aria-expanded', 'false');
+            botonMenu.setAttribute('aria-label', 'Abrir menú');
+        }
+
+        botonMenu.addEventListener('click', function () {
+            const abierto = navegacion.classList.toggle('is-open');
+            botonMenu.classList.toggle('is-open', abierto);
+            botonMenu.setAttribute('aria-expanded', String(abierto));
+            botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+        });
+
+        navegacion.querySelectorAll('a').forEach(function (enlace) {
+            enlace.addEventListener('click', cerrarMenu);
+        });
+
+        document.addEventListener('keydown', function (evento) {
+            if (evento.key === 'Escape') cerrarMenu();
+        });
+
+        document.addEventListener('click', function (evento) {
+            if (!evento.target.closest('.header')) cerrarMenu();
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 880) cerrarMenu();
+        });
+    </script>
+    <script src="SCRIPT/contactos.js"></script>
 </body>
 </html>

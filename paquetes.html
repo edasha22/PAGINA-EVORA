@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre los paquetes Esencial, Personalizado y Lujo de ÉVORA. Compara servicios de organización, planificación y coordinación para tu celebración.">
+    <title>Paquetes y experiencias | ÉVORA</title>
+
+    <!-- Tipografías oficiales de ÉVORA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="CSS/paquetes.css">
+</head>
+
+<body class="pagina-paquetes" id="inicio">
+
+    <!-- 1. ENCABEZADO -->
+    <header class="header">
+        <a class="brand" href="index.html" aria-label="ÉVORA - Ir al inicio">
+            ÉVORA
+            <small>EXPERIENCES · EVENTS</small>
+        </a>
+
+        <nav class="nav" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="bodas.html">Bodas</a>
+            <a href="eventos-corporativos.html">Eventos</a>
+            <a href="paquetes.html" class="active" aria-current="page">Paquetes</a>
+            <a href="blog.html">Blog</a>
+            <a href="Contactos.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 2. PORTADA COLLAGE BOUTIQUE -->
+        <section class="canvas-hero" aria-labelledby="titulo-principal">
+            <div class="collage">
+                <img class="collage-main"
+                     src="MEDIA/evento-aire-libre.png"
+                     alt="Montaje elegante de una celebración al aire libre"
+                     fetchpriority="high">
+
+                <img class="collage-thumb"
+                     src="MEDIA/lujo.png"
+                     alt="Decoración de un salón de lujo"
+                     loading="lazy">
+
+                <div class="collage-tag" aria-hidden="true">
+                    ÉVORA <span>·</span> CURATED EXPERIENCES
+                </div>
+            </div>
+
+            <div class="canvas-copy">
+                <p class="eyebrow">UN MUNDO DE POSIBILIDADES</p>
+                <h1 id="titulo-principal">
+                    Todo comienza<br>
+                    con <em>un sueño.</em>
+                </h1>
+                <div class="thin-line" aria-hidden="true"></div>
+                <p>
+                    Cada celebración es única. En ÉVORA transformamos tus ideas
+                    en una experiencia cuidadosamente organizada, desde los
+                    primeros preparativos hasta el último detalle.
+                </p>
+                <a class="btn dark" href="#coleccion">
+                    Descubre nuestros paquetes
+                    <svg class="icono" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M12 5v14"></path>
+                        <path d="m19 12-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <span class="hero-note">PLANEACIÓN · DISEÑO · COORDINACIÓN</span>
+            </div>
+        </section>
+
+        <!-- 3. INTRODUCCIÓN Y TRES PAQUETES -->
+        <section class="collection" id="coleccion" aria-labelledby="titulo-coleccion">
+            <div class="collection-intro">
+                <div>
+                    <p class="eyebrow">ÉVORA · NUESTRAS EXPERIENCIAS</p>
+                    <h2 id="titulo-coleccion">
+                        Pequeños detalles,<br>
+                        <em>grandes momentos.</em>
+                    </h2>
+                </div>
+                <p>
+                    Tres maneras de hacer realidad tu celebración.
+                    Desde el apoyo esencial hasta una organización integral,
+                    encuentra el acompañamiento ideal para ti.
+                </p>
+            </div>
+
+            <div class="gallery-layout">
+                <!-- PAQUETE 1: ESSENTIAL -->
+                <article class="wide-card" aria-labelledby="paquete-esencial">
+                    <img src="MEDIA/esencial.png"
+                         alt="Mesa de celebración con decoración elegante"
+                         loading="lazy">
+
+                    <div class="wide-info">
+                        <p class="numero-paquete">01 · LA ESENCIA DE CELEBRAR</p>
+                        <h3 id="paquete-esencial">Esencial</h3>
+                        <span class="nombre-original">ESSENTIAL</span>
+
+                        <p class="resumen-paquete">
+                            Para quienes tienen grandes ideas y buscan el apoyo
+                            necesario para organizar cada paso con tranquilidad.
+                        </p>
+
+                        <div class="precio-paquete">
+                            <small>HONORARIOS DESDE</small>
+                            <strong>S/ 3,900</strong>
+                        </div>
+
+                        <p class="lista-titulo">¿Qué incluye?</p>
+                        <ul class="lista-servicios">
+                            <li>Reunión inicial y asesoría de estilo.</li>
+                            <li>Cronograma básico de organización.</li>
+                            <li>Orientación para elegir hasta 3 proveedores.</li>
+                            <li>Una visita de coordinación al lugar.</li>
+                            <li>Coordinación del gran día con 1 responsable.</li>
+                        </ul>
+
+                        <a class="enlace-tarjeta" href="Contactos.html">
+                            Consultar Esencial
+                            <svg class="icono" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PAQUETE 2: SIGNATURE -->
+                <article class="small-card" aria-labelledby="paquete-personalizado">
+                    <img src="MEDIA/personalizado.png"
+                         alt="Decoración de celebración con detalles personalizados"
+                         loading="lazy">
+
+                    <div class="small-info">
+                        <p class="numero-paquete">02 · HECHO A TU MEDIDA</p>
+                        <h3 id="paquete-personalizado">Personalizado</h3>
+                        <span class="nombre-original">SIGNATURE</span>
+
+                        <p class="resumen-paquete">
+                            Una experiencia con tu estilo, tus colores y tus
+                            prioridades, acompañada de principio a fin.
+                        </p>
+
+                        <div class="precio-paquete">
+                            <small>HONORARIOS DESDE</small>
+                            <strong>S/ 7,900</strong>
+                        </div>
+
+                        <p class="lista-titulo">¿Qué incluye?</p>
+                        <ul class="lista-servicios">
+                            <li>Diseño del concepto y propuesta visual.</li>
+                            <li>Planeación y cronograma detallado.</li>
+                            <li>Gestión de hasta 6 proveedores.</li>
+                            <li>Dos visitas de coordinación y seguimiento.</li>
+                            <li>Asesoría de protocolo e invitados.</li>
+                            <li>Coordinación del evento con 2 responsables.</li>
+                        </ul>
+
+                        <a class="enlace-tarjeta" href="Contactos.html">
+                            Consultar Personalizado
+                            <svg class="icono" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PAQUETE 3: LUXURY -->
+                <article class="small-card" aria-labelledby="paquete-lujo">
+                    <img src="MEDIA/lujo.png"
+                         alt="Recepción de lujo con iluminación y ambientación sofisticada"
+                         loading="lazy">
+
+                    <div class="small-info">
+                        <p class="numero-paquete">03 · EXPERIENCIA EXTRAORDINARIA</p>
+                        <h3 id="paquete-lujo">Lujo</h3>
+                        <span class="nombre-original">LUXURY</span>
+
+                        <p class="resumen-paquete">
+                            Para celebrar sin preocupaciones, con una experiencia
+                            exclusiva y cada detalle bajo una misma visión.
+                        </p>
+
+                        <div class="precio-paquete">
+                            <small>HONORARIOS DESDE</small>
+                            <strong>S/ 14,900</strong>
+                        </div>
+
+                        <p class="lista-titulo">¿Qué incluye?</p>
+                        <ul class="lista-servicios">
+                            <li>Dirección creativa y ambientación integral.</li>
+                            <li>Planeación completa con atención prioritaria.</li>
+                            <li>Gestión integral de proveedores.</li>
+                            <li>Tres visitas de coordinación y supervisión.</li>
+                            <li>Ensayo previo y control del montaje.</li>
+                            <li>Coordinación del evento con 3 responsables.</li>
+                        </ul>
+
+                        <a class="enlace-tarjeta" href="Contactos.html">
+                            Consultar Lujo
+                            <svg class="icono" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="nota-precios">
+                Los precios corresponden al servicio de planificación y coordinación.
+                El alquiler de espacios, catering, decoración contratada y otros
+                proveedores se cotizan de acuerdo con las necesidades del evento.
+            </p>
+        </section>
+
+        <!-- 4. TABLA COMPARATIVA -->
+        <section class="compare" id="comparar" aria-labelledby="titulo-comparacion">
+            <div class="section-heading">
+                <p class="eyebrow">ELIGE CON CONFIANZA</p>
+                <h2 id="titulo-comparacion">Compara cada experiencia</h2>
+                <p>
+                    Descubre las diferencias entre nuestros tres niveles de
+                    acompañamiento y encuentra la propuesta que mejor se adapta a ti.
+                </p>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <caption>Servicios y honorarios de los paquetes ÉVORA</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Características</th>
+                            <th scope="col">Esencial <small>Essential</small></th>
+                            <th scope="col">Personalizado <small>Signature</small></th>
+                            <th scope="col">Lujo <small>Luxury</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Tipo de planeación</th>
+                            <td>Parcial</td>
+                            <td>Integral</td>
+                            <td>Integral premium</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Diseño de la experiencia</th>
+                            <td>Asesoría de estilo</td>
+                            <td>Concepto personalizado</td>
+                            <td>Dirección creativa completa</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Selección de proveedores</th>
+                            <td>Hasta 3</td>
+                            <td>Hasta 6</td>
+                            <td>Gestión integral</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Reuniones de planificación</th>
+                            <td>2 reuniones</td>
+                            <td>5 reuniones</td>
+                            <td>Hasta 8 reuniones</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Visitas de coordinación</th>
+                            <td>1 visita</td>
+                            <td>2 visitas</td>
+                            <td>3 visitas</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Coordinadores del evento</th>
+                            <td>1 responsable</td>
+                            <td>2 responsables</td>
+                            <td>3 responsables</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ensayo previo</th>
+                            <td>No incluido</td>
+                            <td>Según el evento</td>
+                            <td>Incluido</td>
+                        </tr>
+                        <tr class="fila-precio">
+                            <th scope="row">Honorarios desde</th>
+                            <td>S/ 3,900</td>
+                            <td>S/ 7,900</td>
+                            <td>S/ 14,900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="compare-note">Todos los paquetes pueden adaptarse según el tipo de celebración, lugar y número de invitados.</p>
+        </section>
+
+        <!-- 5. NUESTRO PROCESO -->
+        <section class="process" aria-labelledby="titulo-proceso">
+            <div class="section-heading">
+                <p class="eyebrow">ASÍ TRABAJAMOS</p>
+                <h2 id="titulo-proceso">Del primer encuentro al gran día</h2>
+                <p>Una manera cercana y organizada de dar vida a todo lo que imaginas.</p>
+            </div>
+            <div class="process-grid">
+                <article class="process-step">
+                    <span class="step-number">01</span>
+                    <h3>Nos conocemos</h3>
+                    <p>Escuchamos tus ideas, el estilo que te gusta y lo que deseas lograr con tu celebración.</p>
+                </article>
+                <article class="process-step">
+                    <span class="step-number">02</span>
+                    <h3>Planeamos contigo</h3>
+                    <p>Preparamos una propuesta, organizamos las tareas y coordinamos cada detalle importante.</p>
+                </article>
+                <article class="process-step">
+                    <span class="step-number">03</span>
+                    <h3>Disfrutas tu momento</h3>
+                    <p>Supervisamos los tiempos y la coordinación para que puedas compartir el día con tus invitados.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 6. PREGUNTAS FRECUENTES: FUNCIONAN SIN JAVASCRIPT -->
+        <section class="faq" aria-labelledby="titulo-preguntas">
+            <div class="faq-heading">
+                <p class="eyebrow">RESOLVEMOS TUS DUDAS</p>
+                <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+                <p>Todo lo que necesitas saber antes de dar el siguiente paso.</p>
+            </div>
+            <div class="faq-items">
+                <details>
+                    <summary>¿Los precios incluyen el local y el catering?</summary>
+                    <p>No. Los importes mostrados corresponden a la planificación y coordinación. El local, catering, fotografía, decoración y otros servicios se presupuestan por separado.</p>
+                </details>
+                <details>
+                    <summary>¿Puedo personalizar un paquete?</summary>
+                    <p>Sí. Podemos ajustar el alcance, la propuesta visual y las actividades según el tamaño de tu celebración, sus necesidades y tu presupuesto.</p>
+                </details>
+                <details>
+                    <summary>¿Con cuánto tiempo debo empezar a organizar mi evento?</summary>
+                    <p>Recomendamos iniciar con varios meses de anticipación para contar con más opciones de fechas y proveedores. También podemos revisar celebraciones con plazos más cortos.</p>
+                </details>
+                <details>
+                    <summary>¿Cómo puedo separar una fecha?</summary>
+                    <p>Primero nos cuentas sobre tu evento. Luego preparamos una propuesta personalizada y, cuando estés conforme, coordinamos las condiciones de reserva.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 7. LLAMADO A LA ACCIÓN -->
+        <section class="cta" aria-labelledby="titulo-cotizacion">
+            <div>
+                <p class="eyebrow">TU MOMENTO ES IMPORTANTE</p>
+                <h2 id="titulo-cotizacion">Hablemos de tu celebración</h2>
+                <p>Cuéntanos qué imaginas. Juntos encontraremos la mejor manera de hacerlo realidad.</p>
+            </div>
+            <a class="btn gold" href="Contactos.html">
+                Solicitar una cotización
+                <svg class="icono" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg>
+            </a>
+        </section>
+    </main>
+
+    <!-- 8. PIE DE PÁGINA COMPLETO -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-about">
+                <a class="footer-logo" href="index.html" aria-label="ÉVORA - Inicio">
+                    ÉVORA
+                    <small>EXPERIENCES · EVENTS</small>
+                </a>
+                <p class="footer-description">
+                    Creamos celebraciones memorables a través de la
+                    creatividad, la planificación y el cuidado de cada detalle.
+                </p>
+                <span class="footer-tagline">Cada detalle, perfectamente planeado.</span>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explora</h3>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="paquetes.html">Paquetes</a>
+                <a href="blog.html">Nuestro blog</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Experiencias</h3>
+                <a href="bodas.html">Bodas</a>
+                <a href="bodas-destino.html">Bodas destino</a>
+                <a href="eventos-corporativos.html">Eventos corporativos</a>
+                <a href="#comparar">Comparar paquetes</a>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3>Comienza tu historia</h3>
+                <p>¿Tienes una fecha especial en mente? Estamos aquí para ayudarte a planearla.</p>
+                <a class="footer-link-contact" href="Contactos.html">
+                    Hablemos de tu evento
+                    <svg class="icono" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+            <p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
+            <a href="#inicio">
+                Volver arriba
+                <svg class="icono" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M12 19V5"></path>
+                    <path d="m5 12 7-7 7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
