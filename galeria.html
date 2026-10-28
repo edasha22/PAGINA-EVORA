@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
 	<link rel="stylesheet" href="CSS/galeria.css">
 </head>
-<body>
+<body id="inicio">
 	<header class="site-header">
 		<div class="container header-inner">
 			<a href="nosotros.html" class="logo" aria-label="ÉVORA Experiences">
@@ -110,23 +110,52 @@
 	</main>
 
 	<footer class="site-footer">
-		<div class="container grid-12">
-			<div class="col-6">
-				<div class="logo footer-logo"><span class="logo-title">ÉVORA</span><span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span></div>
-				<p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos con atención personalizada.</p>
+		<div class="footer-main">
+			<div class="footer-about">
+				<a class="footer-logo" href="index.html" aria-label="ÉVORA - Inicio">ÉVORA<small>EXPERIENCES · EVENTS</small></a>
+				<p class="footer-description">Creamos celebraciones memorables a través de la creatividad, la planificación y el cuidado de cada detalle.</p>
+				<span class="footer-tagline">Cada detalle, perfectamente planeado.</span>
 			</div>
-			<div class="col-6">
-				<h2 class="footer-heading">Navegación del sitio</h2>
-				<ul class="footer-links">
-					<li><a href="nosotros.html">Nosotros</a></li>
-					<li><a href="bodas.html">Bodas</a></li>
-					<li><a href="ocasiones-especiales.html">Ocasiones Especiales</a></li>
-					<li><a href="galeria.html" aria-current="page">Galería</a></li>
-					<li><a href="Contactos.html">Contacto</a></li>
-				</ul>
+			<div class="footer-column">
+				<h3>Explora</h3>
+				<a href="index.html">Inicio</a>
+				<a href="nosotros.html">Nosotros</a>
+				<a href="paquetes.html">Paquetes</a>
+				<a href="blog.html">Nuestro blog</a>
+			</div>
+			<div class="footer-column">
+				<h3>Experiencias</h3>
+				<a href="bodas.html">Bodas</a>
+				<a href="bodas-destino.html">Bodas destino</a>
+				<a href="eventos-corporativos.html">Eventos corporativos</a>
+				<a href="ocasiones-especiales.html">Ocasiones especiales</a>
+				<a href="rsvp.html">RSVP Digital</a>
+				<a href="gestion-invitados.html">Gestión de invitados</a>
+				<a href="galeria.html">Galería</a>
+			</div>
+			<div class="footer-column footer-contact">
+				<h3>Comienza tu historia</h3>
+				<p>¿Tienes una fecha especial en mente? Estamos aquí para ayudarte a planearla.</p>
+				<a class="footer-link-contact" href="Contactos.html">
+					Hablemos de tu evento
+					<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M5 12h14"></path>
+						<path d="m12 5 7 7-7 7"></path>
+					</svg>
+				</a>
 			</div>
 		</div>
-		<div class="gallery-copyright"><p>&copy; 2026 ÉVORA Experiences. Todos los derechos reservados.</p></div>
+		<div class="footer-bottom">
+			<p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+			<p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
+			<a href="#inicio">
+				Volver arriba
+				<svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M12 19V5"></path>
+					<path d="m5 12 7-7 7 7"></path>
+				</svg>
+			</a>
+		</div>
 	</footer>
 	<script src="SCRIPT/general.js"></script>
 </body>

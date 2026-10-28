@@ -7,7 +7,7 @@ document.querySelectorAll('.site-header').forEach((header) => {
     return;
   }
 
-  const mobileMenuQuery = window.matchMedia('(max-width: 400px)');
+  const mobileMenuQuery = window.matchMedia('(max-width: 880px)');
 
   function closeMenu() {
     menuToggle.classList.remove('is-active');
