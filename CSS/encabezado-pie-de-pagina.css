@@ -161,7 +161,7 @@ body.menu-open {
   align-items: center;
   gap: clamp(12px, 2vw, 32px);
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   padding: clamp(14px, 1.8vw, 24px) clamp(16px, 3vw, 48px);
 }
 
@@ -170,8 +170,12 @@ body.menu-open {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(8px, 1.15vw, 20px);
   min-width: 0;
+  
+  a{
+    margin: 0 15px;
+    font-size: 14px;
+  }
 }
 
 .nav-link {
@@ -421,8 +425,10 @@ body.menu-open {
 .footer-links {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-2) var(--space-4);
+  grid-auto-flow: row;
+  justify-items: center;
 }
 
 .footer-links a {

@@ -6,6 +6,7 @@
     <meta name="description" content="Organización de bodas elegantes y personalizadas con EVORA. Creamos momentos inolvidables.">
     <title>Bodas | EVORA Eventos</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
     <style>
         .bodas-portada{min-height:480px;padding:70px 7%;display:flex;align-items:center;background:linear-gradient(90deg,#fff1f4ed,#fffaf0a6),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover}
         .bodas-intro{max-width:650px}
@@ -37,17 +38,31 @@
     </style>
 </head>
 <body>
-    <header class="encabezado">
-        <a href="index.html" class="logo">EVORA</a>
-        <nav aria-label="Menú principal">
-            <a href="index.html">Inicio</a>
-            <a href="nosotrol.html">Nosotros</a>
-            <a href="bodas.html">Bodas</a>
-            <a href="bodas-destino.html">Bodas destino</a>
-            <a href="paquetes.html">Paquetes</a>
-            <a href="galeria.html">Galería</a>
-            <a href="contacto.html">Contacto</a>
+    <header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+            <span class="logo-title">ÉVORA</span>
+            <span class="logo-sub">EXPERIENCES</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="bodas.html" class="nav-link">Bodas</a>
+            <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+            <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+            <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+            <a href="paquetes.html" class="nav-link">Paquetes</a>
+            <a href="Contactos.html" class="btn btn-secondary" aria-current="page">Contacto</a>
         </nav>
+    </div>
+        <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
     </header>
 
     <main>
@@ -56,7 +71,7 @@
                 <span class="bodas-etiqueta">AMOR · ELEGANCIA · RECUERDOS</span>
                 <h1>El comienzo de una historia inolvidable</h1>
                 <p>Diseñamos bodas llenas de emoción, belleza y detalles que hablan de ustedes. Nos encargamos de transformar sus ideas en una celebración única.</p>
-                <a href="contacto.html" class="boton">Comencemos a planear ♡</a>
+                <a href="Contactos.html" class="boton">Comencemos a planear ♡</a>
             </div>
         </section>
 
@@ -116,15 +131,37 @@
             <h2>Tu historia merece una celebración única</h2>
             <p>Cuéntanos tu idea y hagamos realidad una boda llena de momentos inolvidables.</p>
             <a href="paquetes.html" class="boton-secundario">Ver paquetes</a>
-            <a href="contacto.html" class="boton">Solicitar información</a>
+            <a href="Contactos.html" class="boton">Solicitar información</a>
         </section>
     </main>
 
-    <footer>
-        <p class="logo-footer">EVORA</p>
-        <p>Diseñamos momentos, creamos recuerdos.</p>
-        <p><a href="index.html">Inicio</a> | <a href="galeria.html">Galería</a> | <a href="contacto.html">Contacto</a></p>
-        <p>&copy; 2026 EVORA. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="container grid-12">
+            <div class="col-6">
+                <div class="logo footer-logo">
+                    <span class="logo-title">ÉVORA</span>
+                    <span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span>
+                </div>
+                <p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos premium con atención personalizada.</p>
+            </div>
+            <div class="col-6">
+                <h2 class="footer-heading">Navegación del sitio</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="bodas.html">Bodas</a></li>
+                    <li><a href="bodas-destino.html">Bodas Destino</a></li>
+                    <li><a href="eventos-corporativos.html">Eventos Corporativos</a></li>
+                    <li><a href="ocasiones-especiales.html">Ocasiones Especiales</a></li>
+                    <li><a href="rsvp.html">RSVP Digital</a></li>
+                    <li><a href="gestion-invitados.html">Gestión de Invitados</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="paquetes.html">Paquetes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Contactos.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

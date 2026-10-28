@@ -1,0 +1,186 @@
+/* ==========================================================================
+   ÉVORA - Estilos del Contenido Principal (Index / Bodas)
+   ========================================================================== */
+
+/* Tipografía de Encabezados (Sección 3.4) */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display, 'Cormorant Garamond', serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-midnight, #0B1320);
+}
+
+/* ==========================================================================
+   Secciones Generales
+   ========================================================================== */
+.section {
+  padding: var(--space-8, 120px) 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto var(--space-6, 64px) auto;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold, #D4B483);
+  font-weight: 600;
+  margin-bottom: var(--space-1, 8px);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2, 16px);
+}
+
+.section-desc {
+  color: var(--color-slate, #64748B);
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Hero Base
+   ========================================================================== */
+.hero {
+  padding-top: var(--space-6, 64px); 
+  padding-bottom: var(--space-7, 80px);
+  background-color: var(--color-ivory, #FAF8F4);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6, 64px);
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-3, 24px);
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  color: var(--color-slate, #64748B);
+  margin-bottom: var(--space-4, 32px);
+}
+
+.hero-img-wrapper {
+  border-radius: var(--radius-premium, 24px);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft, 0px 10px 30px rgba(0,0,0,0.06));
+}
+
+.hero-img-wrapper img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Tarjetas y Grillas (Servicios)
+   ========================================================================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4, 32px);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5, 48px);
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: var(--radius-base, 16px);
+  padding: var(--space-4, 32px);
+  box-shadow: var(--shadow-soft, 0px 10px 30px rgba(0,0,0,0.06));
+  transition: transform var(--transition, 300ms);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: calc(var(--radius-base, 16px) - 4px);
+  margin-bottom: var(--space-3, 24px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-1, 8px);
+}
+
+.card-text {
+  color: var(--color-slate, #64748B);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-3, 24px);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Banner CTA (Llamada a la acción)
+   ========================================================================== */
+.cta-banner {
+  background-color: var(--color-midnight, #0B1320);
+  color: #FFFFFF;
+  border-radius: var(--radius-premium, 24px);
+  padding: var(--space-7, 80px) var(--space-5, 48px);
+  text-align: center;
+  margin: var(--space-6, 64px) 0;
+}
+
+.cta-banner h2 {
+  color: #FFFFFF;
+  font-size: 2.8rem;
+  margin-bottom: var(--space-2, 16px);
+}
+
+.cta-banner p {
+  color: var(--color-mist, #F1F5F9);
+  max-width: 600px;
+  margin: 0 auto var(--space-4, 32px) auto;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Responsive (Contenido Principal)
+   ========================================================================== */
+@media (max-width: 992px) {
+  /* Obliga a las grillas a mostrarse en 1 sola columna en tablet y celular */
+  .hero-grid, 
+  .grid-3, 
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-4, 32px);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-img-wrapper img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-banner h2 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: var(--space-6, 64px) 0;
+  }
+}
