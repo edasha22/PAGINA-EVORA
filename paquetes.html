@@ -24,7 +24,16 @@
             <small>EXPERIENCES · EVENTS</small>
         </a>
 
-        <nav class="nav" aria-label="Menú principal">
+        <!-- Menú hamburguesa para tabletas y celulares -->
+        <button class="menu-toggle" type="button"
+                aria-label="Abrir menú de navegación"
+                aria-controls="menu-principal" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="menu-principal" aria-label="Menú principal">
             <a href="index.html">Inicio</a>
             <a href="nosotros.html">Nosotros</a>
             <a href="bodas.html">Bodas</a>
@@ -449,5 +458,42 @@
             </a>
         </div>
     </footer>
+
+    <!-- Funcionamiento del menú hamburguesa sin archivos JS adicionales -->
+    <script>
+        const botonMenu = document.querySelector('.menu-toggle');
+        const navegacion = document.querySelector('#menu-principal');
+
+        function cerrarMenu() {
+            botonMenu.classList.remove('is-open');
+            botonMenu.setAttribute('aria-expanded', 'false');
+            botonMenu.setAttribute('aria-label', 'Abrir menú de navegación');
+            navegacion.classList.remove('is-open');
+        }
+
+        botonMenu.addEventListener('click', function () {
+            const abierto = botonMenu.getAttribute('aria-expanded') === 'true';
+            botonMenu.classList.toggle('is-open', !abierto);
+            botonMenu.setAttribute('aria-expanded', String(!abierto));
+            botonMenu.setAttribute('aria-label', abierto ? 'Abrir menú de navegación' : 'Cerrar menú de navegación');
+            navegacion.classList.toggle('is-open', !abierto);
+        });
+
+        navegacion.querySelectorAll('a').forEach(function (enlace) {
+            enlace.addEventListener('click', cerrarMenu);
+        });
+
+        document.addEventListener('keydown', function (evento) {
+            if (evento.key === 'Escape') cerrarMenu();
+        });
+
+        document.addEventListener('click', function (evento) {
+            if (!evento.target.closest('.header')) cerrarMenu();
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 880) cerrarMenu();
+        });
+    </script>
 </body>
 </html>
