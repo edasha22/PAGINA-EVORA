@@ -11,31 +11,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tu hoja de estilos externa -->
+  <!-- Hojas de estilo compartida y de contenido -->
+  <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
   <link rel="stylesheet" href="CSS/bodas-destino.css">
 </head>
 <body id="inicio">
 
-  <!-- ENCABEZADO ÉVORA: ESTILO PAQUETES Y MENÚ HAMBURGUESA -->
-  <header class="evora-header">
-    <a class="evora-brand" href="index.html" aria-label="ÉVORA - Ir al inicio">
-      ÉVORA
-      <small>EXPERIENCES · EVENTS</small>
-    </a>
-    <button class="evora-menu-toggle" type="button" aria-label="Abrir menú" aria-controls="evora-navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="evora-nav" id="evora-navigation" aria-label="Menú principal">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="bodas.html">Bodas</a>
-      <a href="eventos-corporativos.html">Eventos</a>
-      <a href="paquetes.html">Paquetes</a>
-      <a href="blog.html">Blog</a>
-      <a href="Contactos.html">Contacto</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+        <span class="logo-title">ÉVORA</span>
+        <span class="logo-sub">EXPERIENCES</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="bodas.html" class="nav-link">Bodas</a>
+        <a href="bodas-destino.html" class="nav-link active" aria-current="page">Bodas Destino</a>
+        <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+        <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+        <a href="paquetes.html" class="nav-link">Paquetes</a>
+        <a href="Contactos.html" class="btn btn-secondary">Contacto</a>
+      </nav>
+    </div>
+    <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
   </header>
-  <button class="evora-menu-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1" hidden></button>
 
   <main>
     <!-- HERO PRINCIPAL (Editorial, sin vídeo ni parallax - Sección 4.1) -->
@@ -388,33 +391,6 @@
       const reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, left: 0, behavior: reducirMovimiento ? 'instant' : 'smooth' });
     });
-  </script>
-  <script>
-    // Menú hamburguesa independiente; conserva las funciones existentes.
-    (() => {
-      const boton = document.querySelector('.evora-menu-toggle');
-      const menu = document.querySelector('.evora-nav');
-      const fondo = document.querySelector('.evora-menu-backdrop');
-      if (!boton || !menu || !fondo) return;
-      function cerrar() {
-        menu.classList.remove('evora-open');
-        boton.classList.remove('evora-open');
-        boton.setAttribute('aria-expanded', 'false');
-        boton.setAttribute('aria-label', 'Abrir menú');
-        fondo.hidden = true;
-      }
-      boton.addEventListener('click', () => {
-        const abierto = menu.classList.toggle('evora-open');
-        boton.classList.toggle('evora-open', abierto);
-        boton.setAttribute('aria-expanded', String(abierto));
-        boton.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-        fondo.hidden = !abierto;
-      });
-      fondo.addEventListener('click', cerrar);
-      menu.querySelectorAll('a').forEach(enlace => enlace.addEventListener('click', cerrar));
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrar(); });
-      window.addEventListener('resize', () => { if (window.innerWidth > 880) cerrar(); });
-    })();
   </script>
 </body>
 </html>

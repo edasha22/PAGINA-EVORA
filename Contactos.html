@@ -8,35 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
     <link rel="stylesheet" href="CSS/Contactos.css">
+    <script src="SCRIPT/general.js" defer></script>
 </head>
 <body id="inicio" class="pagina-contacto">
 
-    <!-- 1. ENCABEZADO -->
-    <header class="header">
-        <a class="brand" href="index.html" aria-label="ÉVORA - Ir al inicio">
-            ÉVORA
-            <small>EXPERIENCES · EVENTS</small>
-        </a>
-
-        <!-- Menú hamburguesa para celulares -->
-        <button class="menu-toggle" type="button"
-                aria-label="Abrir menú" aria-controls="main-navigation"
-                aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="nav" id="main-navigation" aria-label="Menú principal">
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="bodas.html">Bodas</a>
-            <a href="eventos-corporativos.html">Eventos</a>
-            <a href="paquetes.html">Paquetes</a>
-            <a href="blog.html">Blog</a>
-            <a href="Contactos.html" class="active" aria-current="page">Contacto</a>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+                <span class="logo-title">ÉVORA</span>
+                <span class="logo-sub">EXPERIENCES</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="bodas.html" class="nav-link">Bodas</a>
+                <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+                <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+                <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+                <a href="paquetes.html" class="nav-link">Paquetes</a>
+                <a href="Contactos.html" class="btn btn-secondary active" aria-current="page">Contacto</a>
+            </nav>
+        </div>
+        <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
     </header>
 
   <main>
@@ -313,41 +311,6 @@
         </div>
     </footer>
 
-    <!-- Control del menú hamburguesa sin necesitar otro archivo JS -->
-    <script>
-        const botonMenu = document.querySelector('.menu-toggle');
-        const navegacion = document.querySelector('#main-navigation');
-
-        function cerrarMenu() {
-            botonMenu.classList.remove('is-open');
-            navegacion.classList.remove('is-open');
-            botonMenu.setAttribute('aria-expanded', 'false');
-            botonMenu.setAttribute('aria-label', 'Abrir menú');
-        }
-
-        botonMenu.addEventListener('click', function () {
-            const abierto = navegacion.classList.toggle('is-open');
-            botonMenu.classList.toggle('is-open', abierto);
-            botonMenu.setAttribute('aria-expanded', String(abierto));
-            botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-        });
-
-        navegacion.querySelectorAll('a').forEach(function (enlace) {
-            enlace.addEventListener('click', cerrarMenu);
-        });
-
-        document.addEventListener('keydown', function (evento) {
-            if (evento.key === 'Escape') cerrarMenu();
-        });
-
-        document.addEventListener('click', function (evento) {
-            if (!evento.target.closest('.header')) cerrarMenu();
-        });
-
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 880) cerrarMenu();
-        });
-    </script>
     <script src="SCRIPT/contactos.js"></script>
 </body>
 </html>

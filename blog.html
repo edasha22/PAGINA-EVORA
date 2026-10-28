@@ -8,26 +8,33 @@
         <link href="https://fonts.googleapis.com" rel="preconnect">
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+        <link href="CSS/encabezado-pie-de-pagina.css" rel="stylesheet">
         <link href="CSS/blog.css" rel="stylesheet">
+        <script src="SCRIPT/general.js" defer></script>
         <script src="SCRIPT/blog.js" defer></script>
     </head>
-    <body id="arriba">
-        <header class="header">
-            <a class="brand" href="index.html" aria-label="ÉVORA - Ir al inicio">ÉVORA <small>EXPERIENCES · EVENTS</small></a>
-            <!-- Menú hamburguesa para tabletas y celulares -->
-            <button class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-controls="menu-principal" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav" id="menu-principal" aria-label="Menú principal">
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="bodas.html">Bodas</a>
-                <a href="eventos-corporativos.html">Eventos</a>
-                <a href="paquetes.html">Paquetes</a>
-                <a class="active" href="blog.html" aria-current="page">Blog</a>
-                <a href="Contactos.html">Contacto</a>
+    <body id="inicio">
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+                    <span class="logo-title">ÉVORA</span>
+                    <span class="logo-sub">EXPERIENCES</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    <a href="bodas.html" class="nav-link">Bodas</a>
+                    <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+                    <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+                    <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+                    <a href="paquetes.html" class="nav-link">Paquetes</a>
+                    <a href="Contactos.html" class="btn btn-secondary">Contacto</a>
+                </nav>
+            </div>
+            <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
             </nav>
         </header>
         <main>

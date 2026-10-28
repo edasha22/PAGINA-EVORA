@@ -10,7 +10,7 @@ document.querySelectorAll('.site-header').forEach((header) => {
   const mobileMenuQuery = window.matchMedia('(max-width: 880px)');
 
   function closeMenu() {
-    menuToggle.classList.remove('is-active');
+    menuToggle.classList.remove('is-open');
     mainNav.classList.remove('is-open');
     drawerBackdrop.classList.remove('is-active');
     menuToggle.setAttribute('aria-expanded', 'false');
@@ -26,7 +26,7 @@ document.querySelectorAll('.site-header').forEach((header) => {
       return;
     }
 
-    menuToggle.classList.add('is-active');
+    menuToggle.classList.add('is-open');
     mainNav.classList.add('is-open');
     drawerBackdrop.classList.add('is-active');
     menuToggle.setAttribute('aria-expanded', 'true');
