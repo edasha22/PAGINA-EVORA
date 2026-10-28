@@ -3,128 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Organización de bodas elegantes y personalizadas con EVORA. Creamos momentos inolvidables.">
-    <title>Bodas | EVORA Eventos</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        .bodas-portada{min-height:480px;padding:70px 7%;display:flex;align-items:center;background:linear-gradient(90deg,#fff1f4ed,#fffaf0a6),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover}
-        .bodas-intro{max-width:650px}
-        .bodas-portada h1{font-size:clamp(2.8rem,6vw,4.7rem);margin:15px 0;color:#59443e}
-        .bodas-portada p{max-width:570px;color:#65534e}
-        .bodas-etiqueta{color:#b87c91;letter-spacing:3px;font-size:.8rem;font-weight:600}
-        .bodas-seccion{max-width:1150px;width:90%;margin:auto;padding:65px 0}
-        .bodas-titulo{text-align:center;margin-bottom:35px}
-        .bodas-titulo h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0}
-        .bodas-titulo p{max-width:650px;margin:auto;color:#806f68}
-        .bodas-tarjetas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-        .boda-card{overflow:hidden;background:#fff;border:1px solid #efdfdc;border-radius:20px;box-shadow:0 10px 28px #80645b15;transition:transform .3s}
-        .boda-card:hover{transform:translateY(-5px)}
-        .boda-card img{width:100%;height:225px;object-fit:cover}
-        .boda-card-contenido{padding:23px}
-        .boda-card h3{margin-bottom:10px;color:#b87c91;font-family:Georgia,serif;font-size:1.35rem}
-        .boda-card p{color:#806f68;font-size:.95rem}
-        .bodas-destacada{padding:60px 7%;text-align:center;background:linear-gradient(135deg,#f8e5eb,#fffaf0)}
-        .bodas-destacada h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:15px}
-        .bodas-destacada p{max-width:700px;margin:0 auto 20px}
-        .bodas-lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:900px;margin:auto}
-        .bodas-servicio{padding:22px;background:#fff;border:1px solid #efdfdc;border-radius:15px}
-        .bodas-servicio h3{margin-bottom:7px;color:#b87c91}
-        .bodas-servicio p{margin:0;color:#806f68}
-        .bodas-cta{text-align:center;padding:55px 20px}
-        .bodas-cta h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:12px}
-        @media(max-width:800px){.bodas-tarjetas{grid-template-columns:repeat(2,minmax(0,1fr))}.bodas-portada{min-height:420px}}
-        @media(max-width:560px){.bodas-tarjetas,.bodas-lista{grid-template-columns:1fr}.bodas-portada{padding:50px 6%}.bodas-card img{height:210px}.bodas-seccion{padding:45px 0}}
-    </style>
+    <meta name="description" content="Planeación completa, parcial y coordinación del día para bodas ÉVORA. Diseñamos celebraciones con atención integral a cada detalle.">
+    <meta name="theme-color" content="#FAF8F4">
+    <title>Bodas | ÉVORA Experiences</title>
+    <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/bodas.css">
 </head>
 <body>
-    <header class="encabezado">
-        <a href="index.html" class="logo">EVORA</a>
-        <nav aria-label="Menú principal">
-            <a href="index.html">Inicio</a>
-            <a href="nosotrol.html">Nosotros</a>
-            <a href="bodas.html">Bodas</a>
-            <a href="bodas-destino.html">Bodas destino</a>
-            <a href="paquetes.html">Paquetes</a>
-            <a href="galeria.html">Galería</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+                <span class="logo-title">ÉVORA</span>
+                <span class="logo-sub">EXPERIENCES</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="bodas.html" class="nav-link active" aria-current="page">Bodas</a>
+                <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+                <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+                <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+                <a href="paquetes.html" class="nav-link">Paquetes</a>
+                <a href="Contactos.html" class="btn btn-secondary">Contacto</a>
+            </nav>
+        </div>
+        <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
     </header>
 
-    <main>
-        <section class="bodas-portada">
-            <div class="bodas-intro">
-                <span class="bodas-etiqueta">AMOR · ELEGANCIA · RECUERDOS</span>
-                <h1>El comienzo de una historia inolvidable</h1>
-                <p>Diseñamos bodas llenas de emoción, belleza y detalles que hablan de ustedes. Nos encargamos de transformar sus ideas en una celebración única.</p>
-                <a href="contacto.html" class="boton">Comencemos a planear ♡</a>
+    <main class="bodas-page">
+        <section class="bodas-hero">
+            <div class="bodas-hero-inner">
+                <div class="bodas-hero-content">
+                    <span class="bodas-eyebrow">Bodas ÉVORA · Planeación integral</span>
+                    <h1>Una celebración que cuenta su historia.</h1>
+                    <p>Diseñamos y coordinamos bodas con intención, precisión y una atención cercana. Desde la primera idea hasta el último detalle del día.</p>
+                    <a href="#modalidades" class="btn btn-primary">Explorar modalidades</a>
+                </div>
             </div>
         </section>
 
-        <section class="bodas-seccion">
-            <div class="bodas-titulo">
-                <span class="bodas-etiqueta">UN DÍA, MIL EMOCIONES</span>
-                <h2>La boda que siempre soñaste</h2>
-                <p>Cada pareja tiene una historia diferente. Creamos celebraciones personalizadas para que cada detalle refleje su esencia.</p>
+        <section class="bodas-section" id="modalidades">
+            <div class="bodas-section-heading">
+                <span class="bodas-kicker">Acompañamiento a su medida</span>
+                <h2>Tres formas de planear su boda</h2>
+                <p>Elijan el nivel de acompañamiento que necesitan. En cada modalidad cuidamos la coordinación, los tiempos y la comunicación con proveedores.</p>
             </div>
-            <div class="bodas-tarjetas">
-                <article class="boda-card">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Decoración romántica para una boda">
-                    <div class="boda-card-contenido">
-                        <h3>Bodas románticas</h3>
-                        <p>Flores delicadas, iluminación cálida y detalles elegantes para una celebración llena de amor.</p>
-                    </div>
+            <div class="bodas-plans">
+                <article class="bodas-plan">
+                    <span class="bodas-plan-number" aria-hidden="true">01</span>
+                    <h3>Planeación completa</h3>
+                    <p>Un equipo a su lado desde la idea inicial hasta el cierre de la celebración.</p>
+                    <ul>
+                        <li>Concepto, presupuesto y cronograma maestro</li>
+                        <li>Selección y coordinación de espacio y proveedores</li>
+                        <li>Diseño de experiencia y seguimiento de cada etapa</li>
+                        <li>Coordinación integral durante el evento</li>
+                    </ul>
+                    <a href="Contactos.html" class="btn btn-secondary">Solicitar información</a>
                 </article>
-                <article class="boda-card">
-                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Mesa elegante preparada para una boda">
-                    <div class="boda-card-contenido">
-                        <h3>Bodas elegantes</h3>
-                        <p>Ambientes sofisticados, una paleta armoniosa y una experiencia cuidada de principio a fin.</p>
-                    </div>
+                <article class="bodas-plan">
+                    <span class="bodas-plan-number" aria-hidden="true">02</span>
+                    <h3>Planeación parcial</h3>
+                    <p>Refuerzo profesional en las decisiones y tareas que aún necesitan resolver.</p>
+                    <ul>
+                        <li>Revisión del plan y prioridades pendientes</li>
+                        <li>Recomendación y enlace con proveedores seleccionados</li>
+                        <li>Seguimiento de logística y calendario de preparación</li>
+                        <li>Integración de los detalles en un plan de evento</li>
+                    </ul>
+                    <a href="Contactos.html" class="btn btn-secondary">Solicitar información</a>
                 </article>
-                <article class="boda-card">
-                    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=800&q=80" alt="Pareja celebrando un día especial">
-                    <div class="boda-card-contenido">
-                        <h3>Bodas íntimas</h3>
-                        <p>Celebraciones acogedoras para compartir momentos especiales con las personas más importantes.</p>
-                    </div>
+                <article class="bodas-plan">
+                    <span class="bodas-plan-number" aria-hidden="true">03</span>
+                    <h3>Coordinación del día</h3>
+                    <p>Ustedes disfrutan; nuestro equipo coordina la operación según el plan acordado.</p>
+                    <ul>
+                        <li>Revisión previa de itinerario y acuerdos</li>
+                        <li>Coordinación de proveedores y tiempos del evento</li>
+                        <li>Atención a cambios y necesidades durante la celebración</li>
+                        <li>Seguimiento de montaje, ceremonia y recepción</li>
+                    </ul>
+                    <a href="Contactos.html" class="btn btn-secondary">Solicitar información</a>
                 </article>
             </div>
         </section>
 
-        <section class="bodas-destacada">
-            <span class="bodas-etiqueta">CADA DETALLE IMPORTA</span>
-            <h2>Nos ocupamos de hacerlo especial</h2>
-            <p>Te acompañamos durante la planificación para que disfrutes del proceso con tranquilidad y vivas tu gran día sin preocupaciones.</p>
-            <a href="bodas-destino.html" class="boton-secundario">Descubrir bodas destino</a>
+        <section class="bodas-featured">
+            <div class="bodas-featured-inner">
+                <div>
+                    <span class="bodas-kicker">La experiencia ÉVORA</span>
+                    <h2>Claridad en el proceso. Cuidado en cada momento.</h2>
+                    <p>Integramos dirección creativa, organización y comunicación para que cada decisión tenga un propósito y la celebración se sienta auténticamente suya.</p>
+                </div>
+                <ul class="bodas-featured-points">
+                    <li>Planificación organizada y transparente</li>
+                    <li>Proveedores coordinados con atención personal</li>
+                    <li>Invitaciones y confirmación RSVP digital</li>
+                    <li>Detalles y tiempos revisados con anticipación</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="bodas-seccion">
-            <div class="bodas-titulo">
-                <span class="bodas-etiqueta">NUESTROS SERVICIOS</span>
-                <h2>Todo lo que tu boda necesita</h2>
-                <p>Unimos creatividad, organización y atención personalizada en cada etapa de tu celebración.</p>
+        <section class="bodas-section">
+            <div class="bodas-section-heading">
+                <span class="bodas-kicker">De la primera conversación al gran día</span>
+                <h2>Un proceso pensado para ustedes</h2>
+                <p>Construimos una ruta clara y flexible, con acompañamiento en cada momento importante.</p>
             </div>
-            <div class="bodas-lista">
-                <article class="bodas-servicio"><h3>♡ Organización integral</h3><p>Planificación, coordinación y seguimiento de cada etapa.</p></article>
-                <article class="bodas-servicio"><h3>♡ Decoración floral</h3><p>Ambientación, arreglos florales y detalles personalizados.</p></article>
-                <article class="bodas-servicio"><h3>♡ Espacios y proveedores</h3><p>Apoyo para elegir el lugar y coordinar los servicios de tu boda.</p></article>
-                <article class="bodas-servicio"><h3>♡ Invitaciones y detalles</h3><p>Diseños y elementos que dan personalidad a tu celebración.</p></article>
+            <div class="bodas-process">
+                <article>
+                    <span>Etapa 01</span>
+                    <h3>Escuchar y diseñar</h3>
+                    <p>Conocemos su visión, prioridades y presupuesto para definir la propuesta y el estilo del evento.</p>
+                </article>
+                <article>
+                    <span>Etapa 02</span>
+                    <h3>Planear y coordinar</h3>
+                    <p>Organizamos proveedores, logística y cronograma, manteniendo los acuerdos y avances claros.</p>
+                </article>
+                <article>
+                    <span>Etapa 03</span>
+                    <h3>Disfrutar y celebrar</h3>
+                    <p>Coordinamos la ejecución de acuerdo con el plan para que puedan enfocarse en vivir el momento.</p>
+                </article>
             </div>
+        </section>
+
+        <section class="bodas-destination">
+            <span class="bodas-kicker">Celebraciones fuera de casa</span>
+            <h2>¿Sueñan con una boda destino?</h2>
+            <p>Descubran nuestro acompañamiento para bodas nacionales e internacionales, con coordinación de invitados, experiencias y logística de viaje.</p>
+            <a href="bodas-destino.html" class="btn btn-secondary">Explorar bodas destino</a>
         </section>
 
         <section class="bodas-cta">
-            <h2>Tu historia merece una celebración única</h2>
-            <p>Cuéntanos tu idea y hagamos realidad una boda llena de momentos inolvidables.</p>
-            <a href="paquetes.html" class="boton-secundario">Ver paquetes</a>
-            <a href="contacto.html" class="boton">Solicitar información</a>
+            <span class="bodas-kicker">El siguiente paso</span>
+            <h2>Hablemos de la boda que imaginan</h2>
+            <p>Cuéntennos en qué etapa están y qué necesitan. Prepararemos una conversación a la medida de su celebración.</p>
+            <div class="bodas-cta-actions">
+                <a href="Contactos.html" class="btn btn-primary">Solicitar una consulta</a>
+                <a href="paquetes.html" class="btn btn-secondary">Ver paquetes</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p class="logo-footer">EVORA</p>
-        <p>Diseñamos momentos, creamos recuerdos.</p>
-        <p><a href="index.html">Inicio</a> | <a href="galeria.html">Galería</a> | <a href="contacto.html">Contacto</a></p>
-        <p>&copy; 2026 EVORA. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="container grid-12">
+            <div class="col-6">
+                <div class="logo footer-logo">
+                    <span class="logo-title">ÉVORA</span>
+                    <span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span>
+                </div>
+                <p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos premium con atención personalizada.</p>
+            </div>
+            <div class="col-6">
+                <h2 class="footer-heading">Navegación del sitio</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="bodas.html" aria-current="page">Bodas</a></li>
+                    <li><a href="bodas-destino.html">Bodas Destino</a></li>
+                    <li><a href="eventos-corporativos.html">Eventos Corporativos</a></li>
+                    <li><a href="ocasiones-especiales.html">Ocasiones Especiales</a></li>
+                    <li><a href="rsvp.html">RSVP Digital</a></li>
+                    <li><a href="gestion-invitados.html">Gestión de Invitados</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="paquetes.html">Paquetes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
+
+    <script src="SCRIPT/general.js"></script>
 </body>
 </html>
