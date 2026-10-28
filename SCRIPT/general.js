@@ -55,6 +55,61 @@ document.querySelectorAll('.site-header').forEach((header) => {
   });
 });
 
+document.querySelectorAll('.evora-header').forEach((header) => {
+  const menuToggle = header.querySelector('.evora-menu-toggle');
+  const mainNav = header.querySelector('.evora-nav');
+  const drawerBackdrop = document.querySelector('.evora-menu-backdrop');
+
+  if (!menuToggle || !mainNav || !drawerBackdrop) {
+    return;
+  }
+
+  function closeMenu() {
+    menuToggle.classList.remove('evora-open');
+    mainNav.classList.remove('evora-open');
+    drawerBackdrop.hidden = true;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open');
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+
+    if (isOpen) {
+      closeMenu();
+      return;
+    }
+
+    menuToggle.classList.add('evora-open');
+    mainNav.classList.add('evora-open');
+    drawerBackdrop.hidden = false;
+    menuToggle.setAttribute('aria-expanded', 'true');
+    menuToggle.setAttribute('aria-label', 'Cerrar menú');
+    document.body.classList.add('menu-open');
+  });
+
+  drawerBackdrop.addEventListener('click', closeMenu);
+  mainNav.addEventListener('click', (event) => {
+    if (event.target.closest('a')) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+
+  window.matchMedia('(min-width: 881px)').addEventListener('change', (event) => {
+    if (event.matches) {
+      closeMenu();
+    }
+  });
+});
+
 document.querySelectorAll('img').forEach((image, index) => {
   image.decoding = 'async';
 

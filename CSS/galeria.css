@@ -1,3 +1,18 @@
+:root {
+	--color-midnight: var(--navy);
+	--color-slate: var(--gray);
+	--color-mist: var(--light);
+	--font-display: 'Cormorant Garamond', Georgia, serif;
+}
+
+main section {
+	padding: 0;
+}
+
+body.menu-open {
+	overflow: hidden;
+}
+
 .gallery-shell {
 	width: min(100% - 48px, 1280px);
 	margin-inline: auto;
