@@ -344,7 +344,7 @@ body.menu-open { overflow: hidden; }
     gap: var(--space-5);
   }
   .footer-links {
-    grid-template-columns: repeat(2, 1fr); /* Mantiene los enlaces en 2 columnas */
+    grid-template-columns: repeat(2, 1fr); 
   }
   .footer-bottom { 
     flex-direction: column; 
