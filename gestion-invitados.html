@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Invitados | ÉVORA Experiences</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+            <span class="logo-title">ÉVORA</span>
+            <span class="logo-sub">EXPERIENCES</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="bodas.html" class="nav-link">Bodas</a>
+            <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+            <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+            <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+            <a href="paquetes.html" class="nav-link">Paquetes</a>
+            <a href="Contactos.html" class="btn btn-secondary" aria-current="page">Contacto</a>
+        </nav>
+    </div>
+        <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
+    </header>
+    
+    <main class="guest-management">
+        <div class="guest-shell">
+            <section class="guest-heading" aria-labelledby="guest-title">
+                <div>
+                    <span class="guest-eyebrow">EVENTO: BODA DE MARÍA &amp; DANIEL</span>
+                    <h1 id="guest-title">Gestión de invitados</h1>
+                    <p>Organiza confirmaciones, accesos y asistencia desde un solo lugar.</p>
+                </div>
+                <span class="guest-date"><i class="bi bi-calendar3"></i> 18 Octubre 2026</span>
+            </section>
+
+            <nav class="guest-tabs" aria-label="Secciones de gestión">
+                <button class="guest-tab active" type="button" data-panel="dashboard" aria-selected="true"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></button>
+                <button class="guest-tab" type="button" data-panel="qr" aria-selected="false"><i class="bi bi-qr-code"></i><span>QR</span></button>
+                <button class="guest-tab" type="button" data-panel="checkin" aria-selected="false"><i class="bi bi-person-check-fill"></i><span>Check-in</span></button>
+                <button class="guest-tab" type="button" data-panel="reportes" aria-selected="false"><i class="bi bi-file-earmark-bar-graph-fill"></i><span>Reportes</span></button>
+                <button class="guest-tab" type="button" data-panel="estadisticas" aria-selected="false"><i class="bi bi-bar-chart-fill"></i><span>Estadísticas</span></button>
+            </nav>
+
+            <section class="guest-panel active" id="dashboard" data-panel-content>
+                <div class="guest-section-title">
+                    <div><span>RESUMEN GENERAL</span><h2>Dashboard</h2></div>
+                    <button class="guest-button guest-button-primary" type="button" data-open-panel="checkin"><i class="bi bi-person-plus-fill"></i> Registrar llegada</button>
+                </div>
+                <div class="guest-stats" aria-label="Resumen del evento">
+                    <article class="guest-stat"><span class="stat-icon gold"><i class="bi bi-people-fill"></i></span><div><strong id="totalGuests">120</strong><p>Invitados totales</p></div></article>
+                    <article class="guest-stat"><span class="stat-icon green"><i class="bi bi-check-circle-fill"></i></span><div><strong id="confirmedGuests">86</strong><p>Confirmados</p></div></article>
+                    <article class="guest-stat"><span class="stat-icon blue"><i class="bi bi-person-check-fill"></i></span><div><strong id="arrivedGuests">0</strong><p>Ya ingresaron</p></div></article>
+                    <article class="guest-stat"><span class="stat-icon rose"><i class="bi bi-hourglass-split"></i></span><div><strong id="pendingGuests">34</strong><p>Pendientes</p></div></article>
+                </div>
+                <div class="guest-dashboard-grid">
+                    <article class="guest-card attendance-card">
+                        <div class="guest-card-header"><div><span>ASISTENCIA</span><h3>Confirmación de invitados</h3></div></div>
+                        <div class="attendance-bar"><div class="attendance-confirmed" id="attendanceConfirmed"></div><div class="attendance-arrived" id="attendanceArrived"></div></div>
+                        <div class="attendance-legend"><span><b class="dot confirmed"></b>Confirmados <strong id="confirmedPercent">72%</strong></span><span><b class="dot arrived"></b>Ingresaron <strong id="arrivedPercent">0%</strong></span><span><b class="dot pending"></b>Pendientes <strong id="pendingPercent">28%</strong></span></div>
+                    </article>
+                    <article class="guest-card activity-card">
+                        <div class="guest-card-header"><div><span>ACTIVIDAD</span><h3>Últimos movimientos</h3></div></div>
+                        <ul class="activity-list" id="activityList">
+                            <li><span class="activity-icon"><i class="bi bi-envelope-check"></i></span><div><strong>Invitación creada</strong><small>Paquete inicial · Hoy, 10:30</small></div></li>
+                            <li><span class="activity-icon"><i class="bi bi-qr-code-scan"></i></span><div><strong>Código QR disponible</strong><small>Escanea desde la sección QR</small></div></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guest-panel" id="qr" data-panel-content>
+                <div class="guest-section-title"><div><span>ACCESO DIGITAL</span><h2>Código QR del evento</h2></div></div>
+                <div class="qr-layout">
+                    <article class="guest-card qr-card">
+                        <img src="MEDIA/codigo-qr.png" alt="Código QR para confirmar la asistencia al evento">
+                        <h3>Escanea para confirmar</h3>
+                        <p>Comparte este código con tus invitados para acceder al formulario de confirmación.</p>
+                        <a class="guest-button guest-button-primary" href="MEDIA/codigo-qr.png" download="codigo-qr-evento.png"><i class="bi bi-download"></i> Descargar QR</a>
+                    </article>
+                    <article class="guest-card qr-details">
+                        <h3>Información compartida</h3>
+                        <dl><div><dt>Evento</dt><dd>Boda de María &amp; Daniel</dd></div><div><dt>Fecha</dt><dd>18 de octubre de 2026</dd></div><div><dt>Ubicación</dt><dd>Jardín Évora</dd></div></dl>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guest-panel" id="checkin" data-panel-content>
+                <div class="guest-section-title"><div><span>CONTROL DE ACCESO</span><h2>Check-in</h2></div></div>
+                <div class="checkin-layout">
+                    <form class="guest-card checkin-form" id="checkinForm">
+                        <label for="guestName">Buscar invitado o escribir nombre</label>
+                        <div class="search-field"><i class="bi bi-search"></i><input id="guestName" type="text" autocomplete="off" placeholder="Ej. Ana Martínez" required></div>
+                        <label for="guestCount">Cantidad de personas</label>
+                        <select id="guestCount"><option value="1">1 persona</option><option value="2">2 personas</option><option value="3">3 personas</option><option value="4">4 personas</option></select>
+                        <button class="guest-button guest-button-primary" type="submit"><i class="bi bi-check2-circle"></i> Confirmar ingreso</button>
+                        <p class="checkin-message" id="checkinMessage" role="status"></p>
+                    </form>
+                    <article class="guest-card checkin-list-card">
+                        <div class="guest-card-header"><div><span>INGRESOS</span><h3>Invitados registrados</h3></div><strong id="listCount">0</strong></div>
+                        <ul class="checkin-list" id="checkinList"><li class="empty-list">Aún no hay ingresos registrados.</li></ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guest-panel" id="reportes" data-panel-content>
+                <div class="guest-section-title"><div><span>DOCUMENTACIÓN</span><h2>Reportes</h2></div><button class="guest-button guest-button-secondary" type="button" id="printReport"><i class="bi bi-printer-fill"></i> Imprimir reporte</button></div>
+                <div class="report-grid">
+                    <article class="guest-card report-card"><span class="report-icon"><i class="bi bi-person-lines-fill"></i></span><div><h3>Lista de invitados</h3><p>Invitados, confirmaciones y estado de ingreso.</p></div><button class="guest-button guest-button-secondary" type="button" data-download="invitados">Descargar CSV</button></article>
+                    <article class="guest-card report-card"><span class="report-icon"><i class="bi bi-person-check-fill"></i></span><div><h3>Registro de asistencia</h3><p>Personas que han realizado el check-in.</p></div><button class="guest-button guest-button-secondary" type="button" data-download="asistencia">Descargar CSV</button></article>
+                    <article class="guest-card report-card"><span class="report-icon"><i class="bi bi-pie-chart-fill"></i></span><div><h3>Resumen del evento</h3><p>Totales generales y porcentajes de asistencia.</p></div><button class="guest-button guest-button-secondary" type="button" data-download="resumen">Descargar CSV</button></article>
+                </div>
+            </section>
+
+            <section class="guest-panel" id="estadisticas" data-panel-content>
+                <div class="guest-section-title"><div><span>ANÁLISIS</span><h2>Estadísticas</h2></div></div>
+                <div class="stats-grid">
+                    <article class="guest-card chart-card"><h3>Estado de confirmaciones</h3><div class="donut" id="confirmationDonut"><div><strong id="confirmationRate">72%</strong><span>confirmado</span></div></div></article>
+                    <article class="guest-card chart-card"><h3>Progreso de asistencia</h3><div class="progress-bars"><div><span>Confirmados</span><div><b id="confirmedProgress"></b></div><strong id="confirmedBarValue">86</strong></div><div><span>Ingresaron</span><div><b id="arrivedProgress"></b></div><strong id="arrivedBarValue">0</strong></div><div><span>Pendientes</span><div><b id="pendingProgress"></b></div><strong id="pendingBarValue">34</strong></div></div></article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container grid-12">
+            <div class="col-6">
+                <div class="logo footer-logo">
+                    <span class="logo-title">ÉVORA</span>
+                    <span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span>
+                </div>
+                <p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos premium con atención personalizada.</p>
+            </div>
+            <div class="col-6">
+                <h2 class="footer-heading">Navegación del sitio</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="bodas.html">Bodas</a></li>
+                    <li><a href="bodas-destino.html">Bodas Destino</a></li>
+                    <li><a href="eventos-corporativos.html">Eventos Corporativos</a></li>
+                    <li><a href="ocasiones-especiales.html">Ocasiones Especiales</a></li>
+                    <li><a href="rsvp.html">RSVP Digital</a></li>
+                    <li><a href="gestion-invitados.html">Gestión de Invitados</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="paquetes.html">Paquetes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Contactos.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="SCRIPT/general.js"></script>
+    <script src="SCRIPT/gestion-invitados.js"></script>
+</body>
+</html>

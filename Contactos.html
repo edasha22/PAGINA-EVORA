@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a ÉVORA para solicitar una cotización, reservar una cita o resolver tus dudas sobre eventos y bodas destino.">
+  <meta name="theme-color" content="#FAF8F4">
+  <title>Contacto | ÉVORA Experiences</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
+  <link rel="stylesheet" href="CSS/Contactos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ÉVORA Inicio">
+        <span class="logo-title">ÉVORA</span>
+        <span class="logo-sub">EXPERIENCES</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="bodas.html" class="nav-link">Bodas</a>
+        <a href="bodas-destino.html" class="nav-link">Bodas Destino</a>
+        <a href="eventos-corporativos.html" class="nav-link">Corporativos</a>
+        <a href="rsvp.html" class="nav-link">RSVP Digital</a>
+        <a href="paquetes.html" class="nav-link">Paquetes</a>
+        <a href="Contactos.html" class="btn btn-secondary" aria-current="page">Contacto</a>
+      </nav>
+    </div>
+    <button class="drawer-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-shell contact-hero-inner">
+        <div class="contact-hero-copy">
+          <span class="eyebrow">Hablemos de tu celebración</span>
+          <h1>Cada gran experiencia comienza con una conversación.</h1>
+          <p>Cuéntanos qué estás imaginando. Nuestro equipo puede ayudarte a planear una boda destino, un evento especial o una celebración corporativa.</p>
+          <a class="btn btn-primary" href="#opciones-contacto">Explorar opciones</a>
+        </div>
+        <aside class="contact-hero-note" aria-label="Atención personalizada">
+          <span class="contact-note-mark" aria-hidden="true">É</span>
+          <p class="eyebrow">ÉVORA Experiences</p>
+          <p class="contact-note-quote">“Cada detalle, perfectamente planeado.”</p>
+          <span class="contact-note-caption">Eventos diseñados alrededor de ti.</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact-section" id="opciones-contacto">
+      <div class="contact-shell">
+        <header class="contact-section-heading">
+          <span class="eyebrow">Estamos para ayudarte</span>
+          <h2>¿Cómo podemos acompañarte?</h2>
+          <p>Elige la opción que mejor se adapte a lo que necesitas y envíanos los detalles directamente.</p>
+        </header>
+
+        <div class="contact-form-grid">
+          <article class="contact-form-card">
+            <div class="form-card-heading">
+              
+              <div>
+                <h3>Solicitar cotización</h3>
+                <p>Comparte los primeros detalles de tu evento.</p>
+              </div>
+            </div>
+            <form class="contact-form" data-contact-form="cotizacion">
+              <div class="form-field">
+                <label for="quote-name">Nombre completo</label>
+                <input id="quote-name" name="nombre" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="quote-email">Correo electrónico</label>
+                <input id="quote-email" name="correo" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="quote-phone">Teléfono</label>
+                <input id="quote-phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="form-field">
+                <label for="quote-event">Tipo de evento</label>
+                <select id="quote-event" name="tipoEvento" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option>Boda destino</option>
+                  <option>Boda</option>
+                  <option>Evento corporativo</option>
+                  <option>Ocasión especial</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="form-field form-field-half">
+                <label for="quote-date">Fecha estimada</label>
+                <input id="quote-date" name="fecha" type="date">
+              </div>
+              <div class="form-field form-field-half">
+                <label for="quote-guests">Número de invitados</label>
+                <input id="quote-guests" name="invitados" type="number" min="1" inputmode="numeric">
+              </div>
+              <div class="form-field">
+                <label for="quote-details">Cuéntanos un poco más</label>
+                <textarea id="quote-details" name="detalles" rows="3" placeholder="Destino, estilo o cualquier detalle importante"></textarea>
+              </div>
+              <button class="btn btn-primary form-submit" type="submit">Preparar solicitud</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+
+          <article class="contact-form-card">
+            <div class="form-card-heading">
+              
+              <div>
+                <h3>Reservar una cita</h3>
+                <p>Coordinemos un momento para conversar.</p>
+              </div>
+            </div>
+            <form class="contact-form" data-contact-form="cita">
+              <div class="form-field">
+                <label for="appointment-name">Nombre completo</label>
+                <input id="appointment-name" name="nombre" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="appointment-email">Correo electrónico</label>
+                <input id="appointment-email" name="correo" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="appointment-phone">Teléfono</label>
+                <input id="appointment-phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="form-field form-field-half">
+                <label for="appointment-date">Fecha preferida</label>
+                <input id="appointment-date" name="fecha" type="date" required>
+              </div>
+              <div class="form-field form-field-half">
+                <label for="appointment-time">Hora preferida</label>
+                <input id="appointment-time" name="hora" type="time" required>
+              </div>
+              <div class="form-field">
+                <label for="appointment-topic">Tema de la cita</label>
+                <select id="appointment-topic" name="tema" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option>Planeación de boda</option>
+                  <option>Boda destino</option>
+                  <option>Evento corporativo</option>
+                  <option>Otro evento</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="appointment-details">Comentario o detalle (opcional)</label>
+                <textarea id="appointment-details" name="comentario" rows="3" maxlength="500" placeholder="¿Hay algo que debamos saber antes de la cita?"></textarea>
+              </div>
+              <button class="btn btn-primary form-submit" type="submit">Preparar cita</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+
+          <article class="contact-form-card">
+            <div class="form-card-heading">
+              
+              <div>
+                <h3>Envíanos un mensaje</h3>
+                <p>¿Tienes una pregunta? Nos encantará leerte.</p>
+              </div>
+            </div>
+            <form class="contact-form" data-contact-form="contacto">
+              <div class="form-field">
+                <label for="message-name">Nombre completo</label>
+                <input id="message-name" name="nombre" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="message-email">Correo electrónico</label>
+                <input id="message-email" name="correo" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="message-subject">Asunto</label>
+                <input id="message-subject" name="asunto" required>
+              </div>
+              <div class="form-field">
+                <label for="message-body">Mensaje</label>
+                <textarea id="message-body" name="mensaje" rows="5" required></textarea>
+              </div>
+              <button class="btn btn-primary form-submit" type="submit">Preparar mensaje</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+        <p class="crm-notice"><strong>Nota:</strong> al enviar un formulario, tus datos se compartirán con Web3Forms para que podamos responderte.</p>
+      </div>
+    </section>
+
+    <section class="contact-details-section" aria-labelledby="contact-details-title">
+      <div class="contact-shell">
+        <header class="contact-section-heading">
+          <span class="eyebrow">También puedes encontrarnos</span>
+          <h2 id="contact-details-title">Nuestros canales</h2>
+          <p>Escríbenos directamente o consulta nuestros otros canales de atención.</p>
+        </header>
+        <div class="contact-details-grid">
+          <article class="contact-detail-card" id="contacto-whatsapp">
+            <span class="detail-icon" aria-hidden="true">↗</span>
+            <h3>WhatsApp</h3>
+            <p data-contact-value="whatsapp">Canal pendiente de configuración.</p>
+            <a class="detail-link" data-contact-link="whatsapp" hidden>Escríbenos por WhatsApp</a>
+          </article>
+          <article class="contact-detail-card">
+            <span class="detail-icon" aria-hidden="true">@</span>
+            <h3>Correo</h3>
+            <p data-contact-value="email">Correo pendiente de configuración.</p>
+            <a class="detail-link" data-contact-link="email" hidden>Enviar un correo</a>
+          </article>
+          <article class="contact-detail-card">
+            <span class="detail-icon" aria-hidden="true">⌖</span>
+            <h3>Ubicación</h3>
+            <p data-contact-value="address">Dirección y mapa pendientes de confirmación.</p>
+            <a class="detail-link" data-contact-link="map" hidden>Ver ubicación</a>
+          </article>
+          <article class="contact-detail-card">
+            <span class="detail-icon" aria-hidden="true">◎</span>
+            <h3>Redes sociales</h3>
+            <p class="social-pending" data-contact-value="social">Perfiles oficiales pendientes de configuración.</p>
+            <div class="social-links" data-social-links></div>
+          </article>
+        </div>
+        <p class="contact-data-note">También puedes escribirnos directamente por WhatsApp.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container grid-12">
+      <div class="col-6">
+        <div class="logo footer-logo">
+          <span class="logo-title">ÉVORA</span>
+          <span class="logo-sub">EXPERIENCES · EVENTS · DESTINATION WEDDINGS</span>
+        </div>
+        <p class="footer-desc">Cada detalle, perfectamente planeado. Organización integral de eventos premium con atención personalizada.</p>
+      </div>
+      <div class="col-6">
+        <h2 class="footer-heading">Navegación del sitio</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="bodas.html">Bodas</a></li>
+          <li><a href="bodas-destino.html">Bodas Destino</a></li>
+          <li><a href="eventos-corporativos.html">Eventos Corporativos</a></li>
+          <li><a href="ocasiones-especiales.html">Ocasiones Especiales</a></li>
+          <li><a href="rsvp.html">RSVP Digital</a></li>
+          <li><a href="gestion-invitados.html">Gestión de Invitados</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="paquetes.html">Paquetes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="Contactos.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float whatsapp-configurable" data-contact-link="whatsapp" href="#contacto-whatsapp" aria-label="Escríbenos por WhatsApp">
+    <span aria-hidden="true">↗</span>
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="SCRIPT/general.js"></script>
+  <script src="SCRIPT/contactos.js"></script>
+</body>
+</html>
