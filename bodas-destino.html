@@ -6,20 +6,18 @@
   <title>Bodas Destino | ÉVORA — Experiences Events Destination Weddings</title>
   <meta name="description" content="Organización integral de bodas y bodas destino nacionales e internacionales. Cada detalle, perfectamente planeado.">
   
-  <!-- Tipografías Oficiales (Sección): Cormorant Garamond (600, 700) e Inter (400, 500, 600) -->
+  <!-- Tipografías Oficiales (Sección 3.4): Cormorant Garamond (600, 700) e Inter (400, 500, 600) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tu hoja de estilos externa -->
   <link rel="stylesheet" href="CSS/bodas-destino.css">
-  <link rel="stylesheet" href="CSS/encabezado-pie-de-pagina.css">
-  <link rel="stylesheet" href="CSS/bodas-destino-encabezado-footer.css">
 </head>
-<body>
+<body id="inicio">
 
   <!-- ENCABEZADO ÉVORA: ESTILO PAQUETES Y MENÚ HAMBURGUESA -->
-  <header class="evora-header" id="inicio">
+  <header class="evora-header">
     <a class="evora-brand" href="index.html" aria-label="ÉVORA - Ir al inicio">
       ÉVORA
       <small>EXPERIENCES · EVENTS</small>
@@ -367,7 +365,7 @@
     <div class="evora-footer-bottom">
       <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
       <p>EXPERIENCES · EVENTS · DESTINATION WEDDINGS</p>
-      <a href="#inicio">Volver arriba
+      <a href="#inicio" id="evora-volver-arriba">Volver arriba
         <svg class="evora-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg>
       </a>
     </div>
@@ -383,6 +381,14 @@
 
   <script src="SCRIPT/general.js"></script>
   <script src="SCRIPT/bodas-destino.js"></script>
+  <script>
+    // Volver al inicio desde el pie de página, también en móviles.
+    document.getElementById('evora-volver-arriba').addEventListener('click', function (evento) {
+      evento.preventDefault();
+      const reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, left: 0, behavior: reducirMovimiento ? 'instant' : 'smooth' });
+    });
+  </script>
   <script>
     // Menú hamburguesa independiente; conserva las funciones existentes.
     (() => {
